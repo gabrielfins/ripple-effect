@@ -2,14 +2,14 @@ $(".ripple-effect").on("pointerdown", function(e) {
     let rect = this.getBoundingClientRect();
     let radius = findFurthestPoint(e.clientX, this.offsetWidth, rect.left, e.clientY, this.offsetHeight, rect.top);
 
-    let circle =  document.createElement("span");
+    let circle =  document.createElement("div");
     circle.classList.add("ripple");
 
     circle.style.left = e.clientX - rect.left - radius + "px";
     circle.style.top = e.clientY - rect.top - radius + "px";
     circle.style.width = circle.style.height = radius * 2 + "px";
 
-    $(this).prepend(circle);
+    $(this).append(circle);
 });
 
 $(".ripple-effect").on("pointerup mouseleave dragleave touchend", function(e) {

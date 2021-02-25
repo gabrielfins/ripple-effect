@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('../ripples.css');
+@import 'normalize';
+@import 'fixes';
+
+$main-font: "Poppins", sans-serif;
+$sencondary-font: "Montserrat", sans-serif;
+$cyan: #21D4FD;
+$purple: #B721FF;
+$main-gradient: linear-gradient(90deg, $cyan, $purple, $cyan, $purple);
+$secondary-gradient: linear-gradient(180deg, rgba(11, 11, 11, 1), rgba(11, 11, 11, .3));
+
+@mixin gradientText($gradient) {
+    background: $gradient;
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin defaultButton() {
+    height: 54px;
+    padding: 0 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@mixin defaultPrimaryStates($color, $colorDark) {
+    &:hover {
+        &.ripples-light {
+            background-color: lighten($color, 12);
+        }
+        
+        background-color: darken($colorDark, 12);
+    }
+
+    &:focus {
+        &.ripples-light {
+            background-color: lighten($color, 16);
+        }
+        
+        background-color: darken($colorDark, 16);
+    }
+}
+
+@mixin defaultStates($color, $colorDark) {
+    &:hover {
+        &.ripples-light {
+            background-color: rgba($color, .12);
+        }
+        
+        background-color: rgba($colorDark, .12);
+    }
+
+    &:focus {
+        &.ripples-light {
+            background-color: rgba($color, .16);
+        }
+        
+        background-color: rgba($colorDark, .16);
+    }
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: $main-font, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: #FFFFFF;
+    z-index: 1;
+    box-shadow: 0 3px 6px 0 rgba(#000000, .3)
+}
+
+.nav-item {
+    @include gradientText($main-gradient);
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        animation: 1s animateBackground infinite linear;
+    }
+}
+
+.section {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    @include gradientText($main-gradient);
+    margin: 0 0 30px 0;
+    font-family: $sencondary-font, sans-serif;
+    font-weight: 700;
+    font-size: 75px;
+    animation: 10s animateBackground linear infinite;
+}
+
+.description {
+    width: 70%;
+}
+
+.test-button {
+    @include defaultButton();
+    margin-top: 40px;
+    background: linear-gradient(90deg, #21D4FD, #B721FF);
+    color: #FFFFFF;
+    transition: all .3s;
+}
+
+.secondary-title {
+    @include gradientText($secondary-gradient);
+    font-family: $sencondary-font, sans-serif;
+    margin: 0 10px;
+    font-size: 50px;
+}
+
+.divider {
+    width: 200px;
+    height: 2px;
+    margin: 10px 0 30px 0;
+    background-color: rgba(11, 11, 11, .3);
+}
+
+.demo-buttons-container {
+    margin: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-buttons-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    &.full-width .demo-buttons {
+        width: 100%;
+
+        & .demo-button {
+            width: 100%;
+        }
+    }
+}
+
+.demo-buttons {
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.demo-button {
+    @include defaultButton();
+    @include defaultPrimaryStates($purple, $purple);
+    margin: 5px 0;
+    background-color: $purple;
+    color: #FFFFFF;
+
+    &.cyan {
+        background-color: $cyan;
+        @include defaultPrimaryStates($cyan, $cyan);
+    }
+
+    &.outline-color {
+        @include defaultStates(#FFFFFF, #000000);
+        background-color: #FFFFFF;
+        color: $purple;
+        border: 2px solid $purple;
+
+        &.cyan {
+            border-color: $cyan;
+            color: $cyan;
+        }
+    }
+
+    &.outlined {
+        @include defaultStates(#FFFFFF, #000000);
+        background-color: #FFFFFF;
+        color: $purple;
+        border: 2px solid rgba(#000000, .2);
+
+        &.cyan {
+            color: $cyan;
+        }
+    }
+
+    &.text {
+        @include defaultStates(#FFFFFF, #000000);
+        background-color: #FFFFFF;
+        color: $purple;
+
+        &.cyan {
+            color: $cyan;
+        }
+    }
+}
+
+.table {
+    margin: 50px 10px 0 10px;
+}
+
+.table-cathegories {
+    background-color: $purple;
+    color: white;
+}
+
+.table-cathegory {
+    height: 40px;
+    font-weight: 500;
+}
+
+.table-entry {
+    height: 40px;
+    font-weight: 500;
+    border: 2px solid rgba(#000000, $alpha: .2);
+    padding: 0 20px;
+}
+
+.material-icons {
+    display: none !important;
+    font-size: 32px !important;
+}
+
+@keyframes animateBackground {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+@media only screen and (max-width: 585px) {
+    .link-text {
+        display: none;
+    }
+
+    .material-icons {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    body {
+        padding: 0 0 50px 0;
+    }
+
+    .navbar {
+        padding: 0;
+        top: auto;
+        bottom: 0;
+        box-shadow: 0px -3px 6px 0 rgba(#000000, .3);
+    }
+
+    .nav-item {
+        width: 25%;
+    }
+
+    .material-icons {
+        display: block !important;
+    }
+}

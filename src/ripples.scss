@@ -1,0 +1,31 @@
+.ripple-effect {
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+
+    &.ripples-light .ripple {
+        background-color: rgba(255, 255, 255, 0.16);
+    }
+
+    &.ripples-dark .ripple {
+        background-color: rgba(0, 0, 0, 0.16);
+    }
+}
+
+.ripple {
+    background-color: rgba(0, 0, 0, 0.16);
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: .6s;
+    animation: ripple 0.3s ease-out;
+}
+
+@keyframes ripple {
+    from {
+            transform: scale(0);
+    }
+    to {
+            transform: scale(1);
+    }
+}

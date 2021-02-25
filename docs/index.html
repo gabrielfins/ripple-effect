@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Ripple Effect</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <a class="ripple-effect nav-item" href="index.html"><span class="material-icons md-48">home</span><p class="link-text">Início</p></a>
+            <a class="ripple-effect nav-item" href="#demo"><span class="material-icons md-48">preview</span><p class="link-text">Demo</p></a>
+            <a class="ripple-effect nav-item" href="#how-to-use"><span class="material-icons md-48">article</span><p class="link-text">Como usar</p></a>
+            <a class="ripple-effect nav-item" href="#add-to-your-project"><span class="material-icons md-48">library_add</span><p class="link-text">Adicione ao seu projeto</p></a>
+        </div>
+        <div class="section" id="start">
+            <h1 class="title">Ripple Effect</h1>
+            <p class="description">Essa é uma implementação do efeito de ripples do Material Design feita com css, javascript e jquery. Uma implementação extremamente precisas em relação ao efeito original.</p>
+            <button class="test-button ripple-effect">Teste aqui!</button>
+        </div>
+        <div class="section" id="demo">
+            <h1 class="secondary-title">Demo</h1>
+            <div class="divider"></div>
+            <div class="demo-buttons-container">
+                <div class="demo-buttons-content">
+                    <div class="demo-buttons">
+                        <button class="ripple-effect cyan demo-button">Primary</button>
+                        <button class="ripple-effect demo-button">Primary</button>
+                    </div>
+                    <div class="demo-buttons">
+                        <button class="ripple-effect outline-color cyan demo-button">Outline color</button>
+                        <button class="ripple-effect outline-color demo-button">Outline color</button>
+                    </div>
+                    <div class="demo-buttons">
+                        <button class="ripple-effect outlined cyan demo-button">Outlined</button>
+                        <button class="ripple-effect outlined demo-button">Outlined</button>
+                    </div>
+                    <div class="demo-buttons">
+                        <button class="ripple-effect text cyan demo-button">Text</button>
+                        <button class="ripple-effect text demo-button">Text</button>
+                    </div>
+                </div>
+                <div class="full-width demo-buttons-content">
+                    <div class="demo-buttons">
+                        <button class="ripple-effect cyan demo-button">Full sized button</button>
+                        <button class="ripple-effect ripples-light demo-button">Full sized button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="how-to-use">
+            <h1 class="secondary-title">Como usar</h1>
+            <div class="divider"></div>
+            <p class="description">Para usar o efeito, basta usar o guia abaixo e adicionar as classes CSS desejadas ao elemento.</p>
+            <table class="table">
+                <thead class="table-cathegories">
+                    <th class="table-cathegory">Classe</th>
+                    <th class="table-cathegory">Efeito</th>
+                </thead>
+                <tbody>
+                    <tr class="table-entries">
+                        <th class="table-entry">ripple-effect</th>
+                        <th class="table-entry">Adiciona o efeito ao componente</th>
+                    </tr>
+                    <tr class="table-entries">
+                        <th class="table-entry">ripples-light</th>
+                        <th class="table-entry">Muda a cor do efeito para sua versão clara</th>
+                    </tr>
+                    <tr class="table-entries">
+                        <th class="table-entry">ripples-dark (padrão)</th>
+                        <th class="table-entry">Muda a cor do efeito para sua versão escura</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section" id="add-to-your-project">
+            <h1 class="secondary-title">Adicione ao seu projeto</h1>
+            <div class="divider"></div>
+            <p class="description">Para adicionar o efeito ao seu projeto, basta baixar e importar a pasta ripples. Depois disso, é só linkar o CSS e o JavaScript à sua página HTML, como em um dos exemplos abaixo. Essa implementação também requer a importação da biblioteca do jQuery.</p>
+        </div>
+    </div>
+    <script src="ripples.js"></script>
+</body>
+</html>

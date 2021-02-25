@@ -1,6 +1,7 @@
 .ripple-effect {
     position: relative;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .ripple-effect.ripples-light .ripple {
@@ -12,7 +13,7 @@
 }
 
 .ripple {
-    background-color: rgba(255, 255, 255, 0.16);
+    background-color: rgba(0, 0, 0, 0.16);
     position: absolute;
     border-radius: 50%;
     pointer-events: none;

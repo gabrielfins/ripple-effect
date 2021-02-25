@@ -1,0 +1,47 @@
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ripple-effect.ripples-light .ripple {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.ripple-effect.ripples-dark .ripple {
+  background-color: rgba(0, 0, 0, 0.16);
+}
+
+.ripple {
+  background-color: rgba(0, 0, 0, 0.16);
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-animation: ripple 0.3s ease-out;
+          animation: ripple 0.3s ease-out;
+}
+
+@-webkit-keyframes ripple {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes ripple {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=ripples.css.map */

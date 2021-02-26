@@ -305,7 +305,7 @@ body {
 .download-button {
     height: 54px;
     margin: 30px 0;
-    padding: 0 40px;
+    padding: 0 20px;
     border-radius: 5px;
     background-color: $purple;
     color: white;
@@ -320,6 +320,11 @@ body {
     
     &:focus {
         background-color: darken($purple, 16);
+    }
+
+    & .material-icons {
+        margin-right: 10px;
+        font-size: 24px !important;
     }
 }
 
@@ -345,8 +350,11 @@ body {
     }
 }
 
-.material-icons {
+.nav-icons {
     display: none !important;
+}
+
+.material-icons {
     font-size: 32px !important;
 }
 
@@ -365,7 +373,7 @@ body {
         display: none;
     }
 
-    .material-icons {
+    .nav-icons {
         display: block !important;
     }
 }

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-@import url('../ripples.css');
+@import url('../ripples/ripples.css');
 @import 'normalize';
 @import 'fixes';
 
@@ -114,7 +114,8 @@ body {
 }
 
 .description {
-    width: 70%;
+    max-width: 640px;
+    margin: 0 10px;
 }
 
 .test-button {
@@ -233,6 +234,115 @@ body {
     font-weight: 500;
     border: 2px solid rgba(#000000, $alpha: .2);
     padding: 0 20px;
+}
+
+.tertiary-title {
+    @include gradientText($secondary-gradient);
+    font-family: $sencondary-font, sans-serif;
+    margin: 50px 10px 0 10px;
+}
+
+.custom-ripples-example {
+    height: 100%;
+    margin: 30px 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.custom-ripple-button {
+    @include defaultButton();
+    width: 200px;
+    height: 112px;
+    margin: 0 20px;
+    background-color: #CACACA;
+
+    &:hover {
+        background-color: lighten(#CACACA, 12);
+    }
+
+    &:focus {
+        background-color: lighten(#CACACA, 16);
+    }
+}
+
+.ripple-effect.ripples-blue .ripple {
+    background-color: #21D4FD;
+    opacity: .32;
+}
+
+.code-content {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: #121535;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    word-break: break-all;
+    
+    & span {
+        display: flex;
+    }
+}
+
+.css-code {
+    color: #FFCB6B;
+}
+
+.css-property {
+    text-indent: 30px;
+    color: #B2CCD6;
+}
+
+.secondary-description {
+    max-width: 500px;
+    margin: 40px 10px 0 10px;
+}
+
+.download-button {
+    height: 54px;
+    margin: 30px 0;
+    padding: 0 40px;
+    border-radius: 5px;
+    background-color: $purple;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    
+    &:hover {
+        background-color: darken($purple, 12);
+    }
+    
+    &:focus {
+        background-color: darken($purple, 16);
+    }
+}
+
+.html-code {
+    color: #ce2a2d;
+}
+
+.html-property {
+    text-indent: 30px;
+    color: #A5ABCC;
+}
+
+.credits {
+    margin: 0 0 30px 0;
+    text-align: center;
+
+    & a {
+        @include gradientText($main-gradient);
+
+        &:hover {
+            animation: 3s animateBackground infinite linear;
+        }
+    }
 }
 
 .material-icons {

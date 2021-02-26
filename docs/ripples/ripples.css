@@ -1,3 +1,4 @@
+/* ripple-effect v1.0.0 | MIT License | github.com/gabrielfins/ripple-effect */
 .ripple-effect {
   position: relative;
   overflow: hidden;
@@ -5,15 +6,16 @@
 }
 
 .ripple-effect.ripples-light .ripple {
-  background-color: rgba(255, 255, 255, 0.16);
+  background-color: #FFFFFF;
 }
 
 .ripple-effect.ripples-dark .ripple {
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: #000000;
 }
 
 .ripple {
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: #000000;
+  opacity: .16;
   position: absolute;
   border-radius: 50%;
   pointer-events: none;

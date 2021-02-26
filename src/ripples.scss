@@ -1,19 +1,22 @@
+/* ripple-effect v1.0.0 | MIT License | github.com/gabrielfins/ripple-effect */
+
 .ripple-effect {
     position: relative;
     overflow: hidden;
     -webkit-tap-highlight-color: transparent;
 
     &.ripples-light .ripple {
-        background-color: rgba(255, 255, 255, 0.16);
+        background-color: #FFFFFF;
     }
 
     &.ripples-dark .ripple {
-        background-color: rgba(0, 0, 0, 0.16);
+        background-color: #000000;
     }
 }
 
 .ripple {
-    background-color: rgba(0, 0, 0, 0.16);
+    background-color: #000000;
+    opacity: .16;
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
@@ -23,9 +26,9 @@
 
 @keyframes ripple {
     from {
-            transform: scale(0);
+        transform: scale(0);
     }
     to {
-            transform: scale(1);
+        transform: scale(1);
     }
 }

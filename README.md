@@ -40,3 +40,5 @@ Há planos para adicionar a possibilidade de baixar o efeito via npm ou yarn.
 - [x] Download dos arquivos
 - [ ] npm
 - [ ] yarn
+
+#### Criado e mantido por [Gabriel Figueredo](https://github.com/gabrielfins)

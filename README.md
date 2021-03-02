@@ -1,4 +1,4 @@
-# ripple-effect
+# <img src="images/ripple-effect-logo.svg" alt="Ripple Effect" width="350px" />
 
 ### Efeito de ripples baseado no Material Design feito com **CSS, JavaScript e jQuery**
 Esse efeito utiliza seletores do jQuery e manipulação do DOM para obter um efeito extremamente preciso em relação ao original.

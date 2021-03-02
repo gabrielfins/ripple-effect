@@ -49,7 +49,7 @@ Há planos para adicionar a possibilidade de baixar o efeito via npm ou yarn.
 
 ## Adicionando ao seu projeto
 
-1. Baixando os arquivos
+1. Ao baixar os arquivos
 
 Por esse método, você precisa linkar os arquivos e a biblioteca do jQuery no seu arquivo HTML.
 

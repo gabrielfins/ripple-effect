@@ -32,20 +32,44 @@ ripples-dark (padrão) | Muda a cor do efeito para sua versão escura
 }
 ```
 
-Nesse exemplo, o elemento que tiver a classe .ripples-blue terá o efeito da cor #21D4FD.
+Nesse exemplo, o elemento que tiver a classe `.ripples-blue` terá o efeito da cor `#21D4FD`.
 
 ##### Nota: É também possível aumentar a opacidade do efeito a partir da propriedade opacity.
 
 ## Instalação
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
-Por enquanto, esse projeto só pode ser adicionado via download e importação dos arquivos. Para baixar somente as pastas dos arquivos,
-acesse o [site de demonstração](https://gabrielfins.github.io/ripple-effect) e vá até a seção "Adicione ao seu projeto" e clique no botão "baixar".
+Por enquanto, esse projeto só pode ser adicionado via download e importação dos arquivos. Para baixar somente as pastas necessárias,
+acesse o [site de demonstração](https://gabrielfins.github.io/ripple-effect), vá até a seção "Adicione ao seu projeto" e clique no botão "baixar".
 Há planos para adicionar a possibilidade de baixar o efeito via npm ou yarn.
 
 - [x] Download dos arquivos
 - [ ] npm
 - [ ] yarn
 
-##
+## Utilizando no seu projeto
+
+1. Baixando os arquivos
+
+Por esse método, você precisa linkar os arquivos e a biblioteca do jQuery no seu arquivo HTML principal.
+
+```html
+<head>
+    <link rel="stylesheet" href="ripples/ripples.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div>
+        ...
+    </div>
+    <script src="ripples/ripples.js"></script>
+</body>
+```
+
+Ou então, ao invés de importar o arquivo CSS no HTML, importar diretamente no seu arquivo CSS principal.
+
+```css
+@import url("ripples/ripples.css");
+```
+---
 #### Criado e mantido por [Gabriel Figueredo](https://github.com/gabrielfins)

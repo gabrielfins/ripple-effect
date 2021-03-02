@@ -376,8 +376,18 @@ h1, p {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #FFFFFF;
   font-family: "Poppins", sans-serif, sans-serif;
+}
+
+.main {
+  width: 100%;
 }
 
 .navbar {
@@ -745,7 +755,7 @@ body {
   background-color: #f3f3f3;
 }
 
-.ripple-effect.ripples-blue .ripple {
+.ripples-blue .ripple {
   background-color: #21D4FD;
   opacity: .32;
 }
@@ -830,7 +840,7 @@ body {
 }
 
 .credits {
-  margin: 0 0 30px 0;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -846,6 +856,11 @@ body {
 .credits a:hover {
   -webkit-animation: 3s animateBackground infinite linear;
           animation: 3s animateBackground infinite linear;
+}
+
+.tertiary-description {
+  max-width: 500px;
+  margin: 0 10px;
 }
 
 .nav-icons {

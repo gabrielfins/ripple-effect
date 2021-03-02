@@ -4,14 +4,14 @@
     position: relative;
     overflow: hidden;
     -webkit-tap-highlight-color: transparent;
+}
 
-    &.ripples-light .ripple {
-        background-color: #FFFFFF;
-    }
+.ripples-light .ripple {
+    background-color: #FFFFFF;
+}
 
-    &.ripples-dark .ripple {
-        background-color: #000000;
-    }
+.ripples-dark .ripple {
+    background-color: #000000;
 }
 
 .ripple {

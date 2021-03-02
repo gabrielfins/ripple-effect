@@ -5,11 +5,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.ripple-effect.ripples-light .ripple {
+.ripples-light .ripple {
   background-color: #FFFFFF;
 }
 
-.ripple-effect.ripples-dark .ripple {
+.ripples-dark .ripple {
   background-color: #000000;
 }
 

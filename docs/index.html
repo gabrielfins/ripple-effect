@@ -10,13 +10,13 @@
     <title>Ripple Effect</title>
 </head>
 <body>
+    <div class="navbar">
+        <a class="ripple-effect nav-item" href="index.html"><span class="nav-icons material-icons">home</span><p class="link-text">Início</p></a>
+        <a class="ripple-effect nav-item" href="#demo"><span class="nav-icons material-icons">preview</span><p class="link-text">Demo</p></a>
+        <a class="ripple-effect nav-item" href="#how-to-use"><span class="nav-icons material-icons">article</span><p class="link-text">Como usar</p></a>
+        <a class="ripple-effect nav-item" href="#add-to-your-project"><span class="nav-icons material-icons">library_add</span><p class="link-text">Adicione ao seu projeto</p></a>
+    </div>
     <div class="main">
-        <div class="navbar">
-            <a class="ripple-effect nav-item" href="index.html"><span class="nav-icons material-icons">home</span><p class="link-text">Início</p></a>
-            <a class="ripple-effect nav-item" href="#demo"><span class="nav-icons material-icons">preview</span><p class="link-text">Demo</p></a>
-            <a class="ripple-effect nav-item" href="#how-to-use"><span class="nav-icons material-icons">article</span><p class="link-text">Como usar</p></a>
-            <a class="ripple-effect nav-item" href="#add-to-your-project"><span class="nav-icons material-icons">library_add</span><p class="link-text">Adicione ao seu projeto</p></a>
-        </div>
         <div class="section">
             <h1 class="title">Ripple Effect</h1>
             <p class="description">Essa é uma implementação do efeito de ripples do Material Design criada a partir de engenharia reversa do efeito original. Feita com CSS, JavaScript e jQuery, é uma implementação extremamente precisa em relação à original.</p>
@@ -78,11 +78,11 @@
             </table>
             <h2 class="tertiary-title">Criando classes personalizadas</h2>
             <div class="divider"></div>
-            <p class="description">Use a classe .ripple dentro da classe .ripple-effect como o alvo, como no exemplo abaixo.</p>
+            <p class="description">Crie uma classe com o nome desejado e use como alvo a classe .ripple dentro dela, como no exemplo abaixo.</p>
             <div class="custom-ripples-example">
                 <button class="custom-ripple-button ripple-effect ripples-blue">ripple-effect ripples-blue</button>
                 <code class="code-content">
-                    <span class="css-code">.ripple-effect.ripples-blue .ripple {</span>
+                    <span class="css-code">.ripples-blue .ripple {</span>
                         <span class="css-property">background-color: #21D4FD;</span>
                         <span class="css-property">opacity: .32;</span>
                     <span class="css-code">}</span>
@@ -112,6 +112,9 @@
                 <span class="html-property">&lt;script&gt; src="ripples/ripples.js"&gt;&lt;/script&gt;</span>
                 <span class="html-code">&lt;/body&gt;</span>
             </code>
+            <h2 class="tertiary-title">IMPORTANTE</h2>
+            <div class="divider"></div>
+            <p class="tertiary-description">Por enquato, o download pode ser feito apenas através do download e importação dos arquivos. A instalação via o npm e yarn ainda estão sendo trabalhadas.</p>
         </div>
         <p class="credits">Criado e mantido por <a href="https://github.com/gabrielfins" target="_blank">Gabriel Figueredo</a></p>
     </div>

@@ -65,8 +65,14 @@ $secondary-gradient: linear-gradient(180deg, rgba(11, 11, 11, 1), rgba(11, 11, 1
 }
 
 body {
+    display: flex;
+    justify-content: center;
     background-color: #FFFFFF;
     font-family: $main-font, sans-serif;
+}
+
+.main {
+    width: 100%;
 }
 
 .navbar {
@@ -267,7 +273,7 @@ body {
     }
 }
 
-.ripple-effect.ripples-blue .ripple {
+.ripples-blue .ripple {
     background-color: #21D4FD;
     opacity: .32;
 }
@@ -338,7 +344,7 @@ body {
 }
 
 .credits {
-    margin: 0 0 30px 0;
+    margin-bottom: 30px;
     text-align: center;
 
     & a {
@@ -348,6 +354,11 @@ body {
             animation: 3s animateBackground infinite linear;
         }
     }
+}
+
+.tertiary-description {
+    max-width: 500px;
+    margin: 0 10px;
 }
 
 .nav-icons {

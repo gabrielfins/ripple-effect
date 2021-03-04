@@ -6,12 +6,13 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.ripples-light .ripple {
-    background-color: #FFFFFF;
-}
-
-.ripples-dark .ripple {
-    background-color: #000000;
+.ripples {
+    &-light .ripple {
+        background-color: #FFFFFF;
+    }
+    &-dark .ripple {
+        background-color: #000000;
+    }
 }
 
 .ripple {

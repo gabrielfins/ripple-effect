@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../dist/ripples.js"></script>
     <title>Ripple Effect</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
     <div class="main">
         <div class="section">
             <h1 class="title">Ripple Effect</h1>
-            <p class="description">Essa é uma implementação do efeito de ripples do Material Design criada a partir de engenharia reversa do efeito original. Feita com CSS, JavaScript e jQuery, é uma implementação extremamente precisa em relação à original.</p>
+            <p class="description">Essa é uma implementação do efeito de ripples do Material Design criada a partir de engenharia reversa, feita com CSS, JavaScript e jQuery. É uma implementação extremamente precisa em relação à original.</p>
             <button class="test-button ripple-effect">Teste aqui!</button>
         </div>
         <div class="section" id="demo">
@@ -99,25 +99,19 @@
             </code>
             <p class="secondary-description">com o yarn</p>
             <code class="code-content">
-                <span class="css-code">yarn add @gabrielfins/ripple-effect --production</span>
+                <span class="css-code">yarn add @gabrielfins/ripple-effect</span>
             </code>
-            <p class="secondary-description">ou pode simplesmente baixar e adicionar ao seu projeto com a configuração abaixo.</p>
-            <a class="ripple-effect download-button" href="ripples.zip" download="ripples"><span class="material-icons">download</span>Baixar</a>
+            <p class="secondary-description">e depois importar com o código:</p>
             <code class="code-content">
-                <span class="html-code">&lt;head&gt;</span>
-                <span class="html-property">&lt;link rel="stylesheet" href="ripples/ripples.css"&gt;</span>
-                <span class="html-property">&lt;script&gt; src="https://code.jquery.com/jquery-3.5.1.min.js"&gt;&lt;/script&gt;</span>
-                <span class="html-code">&lt;/head&gt;</span>
-                <span class="html-code">&lt;body&gt;</span>
-                <span class="html-property">&lt;script&gt; src="ripples/ripples.js"&gt;&lt;/script&gt;</span>
-                <span class="html-code">&lt;/body&gt;</span>
+                <span class="css-code">import "@gabrielfins/ripple-effect";</span>
             </code>
-            <h2 class="tertiary-title">IMPORTANTE</h2>
-            <div class="divider"></div>
-            <p class="tertiary-description">Por enquato, o download pode ser feito apenas através do download e importação dos arquivos. A instalação via o npm e yarn ainda estão sendo trabalhadas.</p>
+            <p class="secondary-description">ou pode baixar e adicionar ao seu projeto e importar com essa tag na head ou no body do seu arquivo html</p>
+            <code class="inline-code-content">
+                <span class="html-code">&lt;script src="dist/ripples.js"&gt;&lt;/script&gt;</span>
+            </code>
+            <a class="ripple-effect download-button" href="dist.zip" download="dist"><span class="material-icons">download</span>Baixar</a>
         </div>
         <p class="credits">Criado e mantido por <a href="https://github.com/gabrielfins" target="_blank">Gabriel Figueredo</a></p>
     </div>
-    <script src="ripples/ripples.js"></script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
-@import url("../ripples/ripples.css");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
 ========================================================================== */
@@ -481,11 +480,10 @@ body {
   -webkit-transition: .3s;
   transition: .3s;
   margin-top: 40px;
+  height: 70px;
   background: -webkit-gradient(linear, left top, right top, from(#21D4FD), to(#B721FF));
   background: linear-gradient(90deg, #21D4FD, #B721FF);
   color: #FFFFFF;
-  -webkit-transition: all .3s;
-  transition: all .3s;
 }
 
 .secondary-title {
@@ -783,6 +781,21 @@ body {
   display: flex;
 }
 
+.inline-code-content {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: #121535;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  word-break: break-all;
+}
+
 .css-code {
   color: #FFCB6B;
 }
@@ -831,12 +844,7 @@ body {
 }
 
 .html-code {
-  color: #ce2a2d;
-}
-
-.html-property {
-  text-indent: 30px;
-  color: #A5ABCC;
+  color: #F07178;
 }
 
 .credits {

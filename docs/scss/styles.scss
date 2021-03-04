@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-@import url('../ripples/ripples.css');
 @import 'normalize';
 @import 'fixes';
 
@@ -127,9 +126,9 @@ body {
 .test-button {
     @include defaultButton();
     margin-top: 40px;
+    height: 70px;
     background: linear-gradient(90deg, #21D4FD, #B721FF);
     color: #FFFFFF;
-    transition: all .3s;
 }
 
 .secondary-title {
@@ -294,6 +293,18 @@ body {
     }
 }
 
+.inline-code-content {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: #121535;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+}
+
 .css-code {
     color: #FFCB6B;
 }
@@ -335,12 +346,7 @@ body {
 }
 
 .html-code {
-    color: #ce2a2d;
-}
-
-.html-property {
-    text-indent: 30px;
-    color: #A5ABCC;
+    color: #F07178;
 }
 
 .credits {

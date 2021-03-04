@@ -39,37 +39,41 @@ Nesse exemplo, o elemento que tiver a classe `.ripples-blue` terá o efeito da c
 ## Instalação
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
-Por enquanto, esse projeto só pode ser adicionado via download e importação dos arquivos. Para baixar somente as pastas necessárias,
-acesse o [site de demonstração](https://gabrielfins.github.io/ripple-effect), vá até a seção "Adicione ao seu projeto" e clique no botão "baixar".
-Há planos para adicionar a possibilidade de baixar o efeito via npm ou yarn.
+Você pode realizar a instalação das seguintes maneiras:
 
-- [x] Download dos arquivos
-- [ ] npm
-- [ ] yarn
+1. Utilizando o npm
+
+```
+npm install @gabrielfins/ripple-effect
+```
+
+2. Utilizando o yarn
+
+```
+yarn add @gabrielfins/ripple-effect
+```
+
+3. Baixando os arquivos
+
+Acesse o [site de demonstração](https://gabrielfins.github.io/ripple-effect), vá até a seção **"Adicione ao seu projeto"** e clique no botão **"Baixar"** para fazer o download apenas dos arquivos necessários. Ou baixe diretamente do repositório.
 
 ## Adicionando ao seu projeto
 
 1. Ao baixar os arquivos
 
-Por esse método, você precisa linkar os arquivos e a biblioteca do jQuery no seu arquivo HTML.
+Por esse método, basta adicionar a tag a seguir em qualquer lugar nas tags `<head>` ou `<body>` do seu documento html.
 
 ```html
-<head>
-    <link rel="stylesheet" href="ripples/ripples.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-</head>
-<body>
-    <div>
-        ...
-    </div>
-    <script src="ripples/ripples.js"></script>
-</body>
+<script src="dist/ripples.js"></script>
 ```
 
-Ou então, ao invés de importar o arquivo CSS no HTML, importar diretamente no seu arquivo CSS principal.
+2. Instalando com npm ou yarn
 
-```css
-@import url("ripples/ripples.css");
+Após realizar a instalação, basta importar o pacote para o arquivo.
+
+```js
+import "@gabrielfins/ripple-effect";
 ```
+
 ---
 #### Criado e mantido por [Gabriel Figueredo](https://github.com/gabrielfins)

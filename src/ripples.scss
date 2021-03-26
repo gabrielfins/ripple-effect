@@ -1,6 +1,6 @@
 /* ripple-effect v1.0.0 | MIT License | github.com/gabrielfins/ripple-effect */
 
-.ripple-effect {
+.md-ripples {
     position: relative;
     overflow: hidden;
     -webkit-tap-highlight-color: transparent;
@@ -21,7 +21,6 @@
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
-    transition: .6s;
     animation: ripple 0.3s ease-out;
 }
 

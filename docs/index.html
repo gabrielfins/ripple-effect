@@ -4,114 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="ripples.js"></script>
     <title>Ripple Effect</title>
 </head>
-<body>
-    <div class="navbar">
-        <a class="ripple-effect nav-item" href="index.html"><span class="nav-icons material-icons">home</span><p class="link-text">Início</p></a>
-        <a class="ripple-effect nav-item" href="#demo"><span class="nav-icons material-icons">preview</span><p class="link-text">Demo</p></a>
-        <a class="ripple-effect nav-item" href="#how-to-use"><span class="nav-icons material-icons">article</span><p class="link-text">Como usar</p></a>
-        <a class="ripple-effect nav-item" href="#add-to-your-project"><span class="nav-icons material-icons">library_add</span><p class="link-text">Adicione ao seu projeto</p></a>
-    </div>
-    <div class="main">
-        <div class="section">
-            <h1 class="title">Ripple Effect</h1>
-            <p class="description">Essa é uma implementação do efeito de ripples do Material Design criada a partir de engenharia reversa, feita com CSS, JavaScript e jQuery. É uma implementação extremamente precisa em relação à original.</p>
-            <button class="test-button ripple-effect">Teste aqui!</button>
-        </div>
-        <div class="section" id="demo">
-            <h1 class="secondary-title">Demo</h1>
-            <div class="divider"></div>
-            <div class="demo-buttons-container">
-                <div class="demo-buttons-content">
-                    <div class="demo-buttons">
-                        <button class="ripple-effect cyan demo-button">Primary</button>
-                        <button class="ripple-effect demo-button">Primary</button>
-                    </div>
-                    <div class="demo-buttons">
-                        <button class="ripple-effect outline-color cyan demo-button">Outline color</button>
-                        <button class="ripple-effect outline-color demo-button">Outline color</button>
-                    </div>
-                    <div class="demo-buttons">
-                        <button class="ripple-effect outlined cyan demo-button">Outlined</button>
-                        <button class="ripple-effect outlined demo-button">Outlined</button>
-                    </div>
-                    <div class="demo-buttons">
-                        <button class="ripple-effect text cyan demo-button">Text</button>
-                        <button class="ripple-effect text demo-button">Text</button>
-                    </div>
+<body id="start">
+    <nav class="navbar">
+        <a class="md-ripples nav-item" href="#start"><span class="nav-icons material-icons">home</span><span class="link-text">Início</span></a>
+        <a class="md-ripples nav-item" href="#demo"><span class="nav-icons material-icons">preview</span><span class="link-text">Demo</span></a>
+        <a class="md-ripples nav-item" href="#how-to-use"><span class="nav-icons material-icons">article</span><span class="link-text">Como usar</span></a>
+        <a class="md-ripples nav-item" href="#add-to-your-project"><span class="nav-icons material-icons">library_add</span><span class="link-text">Adicione ao seu projeto</span></a>
+    </nav>
+    <main>
+        <section>
+            <div class="flex-row start-row flex-stretch">
+                <div class="flex-col">
+                    <h1 class="title">Ripple Effect</h1>
+                    <p class="primary-description">Uma implementação do efeito de ripples do Material Design criada a partir de engenharia reversa com CSS, JavaScript e jQuery, com o objetivo de ser a mais precisa possível em relação ao efeito original.</p>
                 </div>
-                <div class="full-width demo-buttons-content">
-                    <div class="demo-buttons">
-                        <button class="ripple-effect cyan demo-button">Full sized button</button>
-                        <button class="ripple-effect ripples-light demo-button">Full sized button</button>
-                    </div>
+                <div class="flex-col btn-col flex-stretch">
+                    <button class="md-ripples primary-test-btn">Teste aqui!</button>
                 </div>
             </div>
-        </div>
-        <div class="section" id="how-to-use">
-            <h1 class="secondary-title">Como usar</h1>
-            <div class="divider"></div>
-            <p class="description">Para usar o efeito, basta usar o guia abaixo e adicionar as classes CSS desejadas ao elemento.</p>
-            <table class="table">
-                <thead class="table-cathegories">
-                    <th class="table-cathegory">Classe</th>
-                    <th class="table-cathegory">Efeito</th>
+        </section>
+        <section class="secondary-section" id="demo">
+            <h2 class="secondary-title">Demo</h2>
+            <div class="flex-row">
+                <button class="md-ripples secondary-test-btn">Teste aqui!</button>
+                <button class="md-ripples secondary-test-btn">Teste aqui!</button>
+                <button class="md-ripples secondary-test-btn">Teste aqui!</button>
+            </div>
+            <div class="flex-row">
+                <button class="md-ripples flex-stretch secondary-test-btn">Teste aqui!</button>
+                <button class="md-ripples flex-stretch secondary-test-btn">Teste aqui!</button>
+                <button class="md-ripples flex-stretch secondary-test-btn">Teste aqui!</button>
+            </div>
+            <div class="flex-row">
+                <button class="md-ripples flex-stretch secondary-test-btn">Teste aqui!</button>
+                <button class="md-ripples flex-stretch secondary-test-btn">Teste aqui!</button>
+            </div>
+            <div class="flex-row flex-stretch">
+                <button class="md-ripples flex-stretch secondary-test-btn">Teste aqui!</button>
+            </div>
+        </section>
+        <section id="how-to-use">
+            <h2 class="secondary-title">Como usar</h2>
+            <p  class="primary-description">Para usar o efeito, basta seguir o guia abaixo e adicionar as classes CSS desejadas ao elemento.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Classe</th>
+                        <th>Efeito</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr class="table-entries">
-                        <th class="table-entry">ripple-effect</th>
-                        <th class="table-entry">Adiciona o efeito ao componente</th>
+                    <tr>
+                        <td>md-ripples</td>
+                        <td>Adiciona o efeito ao elemento</td>
                     </tr>
-                    <tr class="table-entries">
-                        <th class="table-entry">ripples-light</th>
-                        <th class="table-entry">Muda a cor do efeito para sua versão clara</th>
+                    <tr>
+                        <td>ripples-light</td>
+                        <td>Muda a cor do efeito para branco</td>
                     </tr>
-                    <tr class="table-entries">
-                        <th class="table-entry">ripples-dark (padrão)</th>
-                        <th class="table-entry">Muda a cor do efeito para sua versão escura</th>
+                    <tr>
+                        <td>ripples-dark (padrão)</td>
+                        <td>Muda a cor do efeito para preto</td>
                     </tr>
                 </tbody>
             </table>
-            <h2 class="tertiary-title">Criando classes personalizadas</h2>
-            <div class="divider"></div>
-            <p class="description">Crie uma classe com o nome desejado e use como alvo a classe .ripple dentro dela, como no exemplo abaixo.</p>
-            <div class="custom-ripples-example">
-                <button class="custom-ripple-button ripple-effect ripples-blue">ripple-effect ripples-blue</button>
-                <code class="code-content">
-                    <span class="css-code">.ripples-blue .ripple {</span>
-                        <span class="css-property">background-color: #21D4FD;</span>
-                        <span class="css-property">opacity: .32;</span>
-                    <span class="css-code">}</span>
+            <h3 class="tertiary-title">Mudando os padrões do efeito</h3>
+            <p class="primary-description">Use a classe <span class="css-selectors">.ripple</span> dentro de um elemento <span class="css-selectors">.md-ripples</span> como seletor e coloque a cor e a opacidade desejada. Com isso, todo elemento com a classe <span class="css-selectors">.md-ripples</span> terá a configuração definida, como no exemplo abaixo.</p>
+            <div class="flex-row code-row">
+                <code>
+                    <pre>
+<span class="css-selectors">.md-ripples .ripple</span> <span class="css-symbol">{</span>
+    <span class="css-property">background-color</span><span class="css-symbol">:</span> <span class="css-color cyan"></span><span class="css-value">#21D4FD</span><span class="css-symbol">;</span>
+    <span class="css-property">opacity</span><span class="css-symbol">:</span> </span><span class="css-value">.32</span><span class="css-symbol">;</span>
+<span class="css-symbol">}</span></pre>
                 </code>
+                <button class="md-ripples ripples-cyan tertiary-test-btn">Teste aqui!</button>
             </div>
-            <p class="description">Nota: modificar a opacidade é opcional.</p>
-        </div>
-        <div class="section" id="add-to-your-project">
-            <h1 class="secondary-title">Adicione ao seu projeto</h1>
-            <div class="divider"></div>
-            <p class="secondary-description">Você pode adicionar com o npm</p>
-            <code class="code-content">
-                <span class="css-code">npm install @gabrielfins/ripple-effect</span>
+            <h3 class="tertiary-title">Criando classes personalizadas</h3>
+            <p class="primary-description">Dê o nome que quiser à sua classe e use como seletor a classe .ripple dentro dela, como no exemplo abaixo.</p>
+            <div class="flex-row code-row">
+                <code>
+                    <pre>
+<span class="css-selectors">.ripples-purple .ripple</span> <span class="css-symbol">{</span>
+    <span class="css-property">background-color</span><span class="css-symbol">:</span> <span class="css-color purple"></span><span class="css-value">#B721FF</span><span class="css-symbol">;</span>
+    <span class="css-property">opacity</span><span class="css-symbol">:</span> </span><span class="css-value">.32</span><span class="css-symbol">;</span>
+<span class="css-symbol">}</span></pre>
+                </code>
+                <button class="md-ripples ripples-purple tertiary-test-btn">Teste aqui!</button>
+            </div>
+            <p>Nota: A opacidade padão é de <span class="css-value">.16</span> e <strong>não</strong> precisa ser alterada junto com a cor.</p>
+        </section>
+        <section class="secondary-section" id="add-to-your-project">
+            <h2 class="secondary-title">Adicione ao seu projeto</h2>
+            <p>Você pode instalar com o npm</p>
+            <code class="secondary-code">
+                <pre><span class="package-mgr-name">npm</span> <span class="package-mgr-command">install</span> <span class="package-name">@gabrielfins/ripple-effect</span></pre>
             </code>
-            <p class="secondary-description">com o yarn</p>
-            <code class="code-content">
-                <span class="css-code">yarn add @gabrielfins/ripple-effect</span>
+            <p>Com o yarn</p>
+            <code class="secondary-code">
+                <pre><span class="package-mgr-name">yarn</span> <span class="package-mgr-command">add</span> <span class="package-name">@gabrielfins/ripple-effect</span></pre>
             </code>
-            <p class="secondary-description">e depois importar com o código:</p>
-            <code class="code-content">
-                <span class="css-code">import "@gabrielfins/ripple-effect";</span>
+            <p>E importar no seu arquivo JavaScript:</p>
+            <code class="secondary-code">
+                <pre><span class="js-code">import '</span><span class="js-import">@gabrielfins/ripple-effect</span><span class="js-code">';</span></pre>
             </code>
-            <p class="secondary-description">ou pode baixar e adicionar ao seu projeto e importar com essa tag na head ou no body do seu arquivo html</p>
-            <code class="inline-code-content">
-                <span class="html-code">&lt;script src="dist/ripples.js"&gt;&lt;/script&gt;</span>
+            <p>Ou pode baixar e adicionar o arquivo ao seu projeto e importar com a seguinte tag:</p>
+            <code class="secondary-code">
+                <pre><span class="html-char">&lt;</span><span class="html-tag">script</span> <span class="html-property">src</span><span class="html-char">="</span><span class="html-value">ripples.js</span><span class="html-char">"&gt;</span><span class="html-char">&lt;/</span><span class="html-tag">script</span><span class="html-char">&gt;</span></pre>
             </code>
-            <a class="ripple-effect download-button" href="dist.zip" download="dist"><span class="material-icons">download</span>Baixar</a>
-        </div>
-        <p class="credits">Criado e mantido por <a href="https://github.com/gabrielfins" target="_blank">Gabriel Figueredo</a></p>
-    </div>
+            <a class="md-ripples ripples-purple download-btn" href="ripples.zip"><span class="material-icons">download</span>Baixar</a>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">Criado e mantido por <a class="copyright-link" href="https://github.com/gabrielfins" target="_blank">Gabriel Figueredo</a></p>
+    </footer>
 </body>
 </html>

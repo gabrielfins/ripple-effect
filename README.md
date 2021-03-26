@@ -16,11 +16,24 @@ Esse efeito utiliza seletores do jQuery e manipulação do DOM para obter um efe
 
 Classe | Efeito
 -------|-------
-ripple-effect | Adiciona o efeito ao componente
+md-ripples | Adiciona o efeito ao componente
 ripples-light | Muda a cor do efeito para sua versão clara
 ripples-dark (padrão) | Muda a cor do efeito para sua versão escura
 
-##### Nota: as classes ripples-light e ripples-dark só funcionam em conjunto com a classe ripple-effect.
+##### Nota: as classes ripples-light e ripples-dark só funcionam em conjunto com a classe md-ripples.
+
+### Mudando os padrões do efeito
+
+* Exemplo:
+
+```css
+.md-ripples . ripple {
+    background-color: #21D4FD;
+    opacity: .32;
+}
+```
+
+Nesse exemplo, todo elemento que tiver o efeito adicionado com `.md-ripples` terá o efeito da cor `#21D4FD`.
 
 ### Criando classes personalizadas
 
@@ -28,15 +41,16 @@ ripples-dark (padrão) | Muda a cor do efeito para sua versão escura
 
 ```css
 .ripples-blue .ripple {
-    background-color: #21D4FD;
+    background-color: #B721FF;
+    opacity: .32;
 }
 ```
 
-Nesse exemplo, o elemento que tiver a classe `.ripples-blue` terá o efeito da cor `#21D4FD`.
+Nesse exemplo, o elemento que tiver a classe `.ripples-blue` terá o efeito da cor `#B721FF`.
 
-##### Nota: É também possível aumentar a opacidade do efeito a partir da propriedade opacity.
+##### Nota: a opacidade padrão é .16 e sua alteração é opcional.
 
-## Instalação
+## Adicionane ao seu projeto
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
 Você pode realizar a instalação das seguintes maneiras:
@@ -59,20 +73,20 @@ Acesse o [site de demonstração](https://gabrielfins.github.io/ripple-effect), 
 
 ## Adicionando ao seu projeto
 
-1. Ao baixar os arquivos
-
-Por esse método, basta adicionar a tag a seguir em qualquer lugar nas tags `<head>` ou `<body>` do seu documento html.
-
-```html
-<script src="dist/ripples.js"></script>
-```
-
-2. Instalando com npm ou yarn
+1. Instalando com npm ou yarn
 
 Após realizar a instalação, basta importar o pacote para o arquivo.
 
 ```js
 import "@gabrielfins/ripple-effect";
+```
+
+2. Ao baixar os arquivos
+
+Por esse método, basta adicionar a tag a seguir em qualquer lugar na tag `<head>` ou `<body>` do seu documento html.
+
+```html
+<script src="ripples.js"></script>
 ```
 
 ---

@@ -24,9 +24,6 @@ html {
 body {
     padding-top: 5rem;
     font: 1.8rem 'Jost', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     background-color: #121212;
     color: #E1E1E1;
 }
@@ -280,13 +277,13 @@ code {
     font-size: 1.6rem;
 }
 
-pre {
-    overflow: auto;
+.secondary-code {
+    background-color: #21273c;
+    margin: .8rem 0 2.4rem 0;
 }
 
-.secondary-code {
-    background-color: #2b3147;
-    margin: .8rem 0 2.4rem 0;
+pre {
+    overflow: auto;
 }
 
 .css-selectors {
@@ -432,7 +429,7 @@ pre {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     body {
         padding: 0 0 50px 0;
     }

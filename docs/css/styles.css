@@ -47,6 +47,10 @@ a, button {
     white-space: nowrap;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 .md-ripples .ripple {
     background-color: #FFFFFF;
 }

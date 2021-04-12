@@ -273,7 +273,7 @@ th, td {
     padding: .6rem 1rem;
 }
 
-code {
+.code {
     max-width: 100%;
     padding: 0 2rem;
     border-radius: 5px;
@@ -282,6 +282,10 @@ code {
 }
 
 .secondary-code {
+    max-width: 100%;
+    padding: 0 2rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
     background-color: #21273c;
     margin: .8rem 0 2.4rem 0;
 }

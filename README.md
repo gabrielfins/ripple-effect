@@ -50,7 +50,7 @@ Nesse exemplo, o elemento que tiver a classe `.ripples-blue` terá o efeito da c
 
 ##### Nota: a opacidade padrão é .16 e sua alteração é opcional.
 
-## Adicionane ao seu projeto
+## Instalando no seu projeto
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
 Você pode realizar a instalação das seguintes maneiras:

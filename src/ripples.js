@@ -18,7 +18,7 @@ $(document).on("pointerdown", ".md-ripples", function(e) {
 
 $(document).on("pointerup mouseleave dragleave touchmove touchend touchcancel", ".md-ripples", function() {
     const ripples = $(this).find(".ripple");
-    if (ripples.lenght != 0) {
+    if (ripples.length != 0) {
         ripples.animate({opacity: 0}, 600, function() {
             ripples.remove();
         });

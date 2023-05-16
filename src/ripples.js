@@ -4,7 +4,7 @@ $(() => {
     $(document).on("pointerdown", ".md-ripples", function(e) {
         const rect = this.getBoundingClientRect();
         const radius = findFurthestPoint(e.clientX, this.offsetWidth, rect.left, e.clientY, this.offsetHeight, rect.top);
-    
+
         let circle =  document.createElement("div");
         $(circle).addClass("ripple");
         $(circle).css({

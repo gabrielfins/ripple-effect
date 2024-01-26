@@ -89,5 +89,10 @@ Por esse método, basta adicionar a tag a seguir em qualquer lugar na tag `<head
 <script src="ripples.js"></script>
 ```
 
+Instale usando jsdelivr CDN (Install Using jsdelivr CDN):
+```html
+<script src="https://cdn.jsdelivr.net/gh/gabrielfins/ripple-effect/dist/ripples.js"></script>
+```
+
 ---
 #### Criado e mantido por [Gabriel Figueredo](https://github.com/gabrielfins)

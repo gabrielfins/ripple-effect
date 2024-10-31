@@ -1,35 +1,60 @@
-import './ripples.scss';
+import "./ripples.scss";
 
-$(() => {
-    $(document).on("pointerdown", ".md-ripples", function(e) {
-        const rect = this.getBoundingClientRect();
-        const radius = findFurthestPoint(e.clientX, this.offsetWidth, rect.left, e.clientY, this.offsetHeight, rect.top);
+document.addEventListener("pointerdown", function (e) {
+  const target = e.target.closest(".md-ripples");
+  if (target) {
+    const rect = target.getBoundingClientRect();
+    const radius = findFurthestPoint(
+      e.clientX,
+      target.offsetWidth,
+      rect.left,
+      e.clientY,
+      target.offsetHeight,
+      rect.top
+    );
 
-        let circle =  document.createElement("div");
-        $(circle).addClass("ripple");
-        $(circle).css({
-            top: e.clientY - rect.top - radius + "px",
-            left: e.clientX - rect.left - radius + "px",
-            width: radius * 2 + "px",
-            height: radius * 2 + "px"
-        })
-    
-        $(this).append(circle);
-    });
-    
-    $(document).on("pointerup mouseleave dragleave touchmove touchend touchcancel", ".md-ripples", function() {
-        const ripples = $(this).find(".ripple");
-        if (ripples.length != 0) {
-            ripples.animate({opacity: 0}, 600, function() {
-                ripples.remove();
-            });
-        }
-    });
+    const circle = document.createElement("div");
+    circle.classList.add("ripple");
+    circle.style.top = `${e.clientY - rect.top - radius}px`;
+    circle.style.left = `${e.clientX - rect.left - radius}px`;
+    circle.style.width = `${radius * 2}px`;
+    circle.style.height = `${radius * 2}px`;
+
+    target.appendChild(circle);
+  }
 });
 
-function findFurthestPoint(clickPointX, elementWidth, offsetX, clickPointY, elementHeight, offsetY) {
-    const x = clickPointX - offsetX > elementWidth / 2 ? 0 : elementWidth;
-    const y = clickPointY - offsetY > elementHeight / 2 ? 0 : elementHeight;
-    const r = Math.hypot(x - (clickPointX - offsetX), y - (clickPointY - offsetY));
-    return r;
+function removeRipples(e) {
+  const ripples = document.querySelectorAll(".ripple");
+  ripples.forEach((ripple) => {
+    ripple.style.transition = "opacity 0.6s";
+    ripple.style.opacity = "0";
+    ripple.addEventListener("transitionend", () => {
+      ripple.remove();
+    });
+  });
+}
+
+[
+  "pointerup",
+  "mouseleave",
+  "dragleave",
+  "touchmove",
+  "touchend",
+  "touchcancel",
+].forEach((eventType) => {
+  document.addEventListener(eventType, removeRipples);
+});
+
+function findFurthestPoint(
+  clickPointX,
+  elementWidth,
+  offsetX,
+  clickPointY,
+  elementHeight,
+  offsetY
+) {
+  const x = clickPointX - offsetX > elementWidth / 2 ? 0 : elementWidth;
+  const y = clickPointY - offsetY > elementHeight / 2 ? 0 : elementHeight;
+  return Math.hypot(x - (clickPointX - offsetX), y - (clickPointY - offsetY));
 }

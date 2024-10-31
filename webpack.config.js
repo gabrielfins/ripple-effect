@@ -4,7 +4,6 @@ const webpack = require('webpack');
 module.exports = {
     mode: "production",
     entry: [
-        'jquery',
         './src/ripples.js'
     ],
     output: {
@@ -23,10 +22,5 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
-        })
-    ]
+    plugins: []
 }

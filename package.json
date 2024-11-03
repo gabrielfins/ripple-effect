@@ -1,6 +1,6 @@
 {
   "name": "@gabrielfins/ripple-effect",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Precise implementation of Material Design's ripple effect with CSS, JavaScript and jQuery",
   "exports": "./dist/ripples.js",
   "main": "./dist/ripples.js",

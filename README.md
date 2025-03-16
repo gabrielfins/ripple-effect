@@ -16,78 +16,91 @@ A lightweight ripple effect that automatically works on buttons and can be added
 
 Attribute | Effect
 ----------|--------
-r | Adds ripple effect to non-button elements (buttons have it by default)
-nr | Disables ripple effect on buttons
+ripple | Adds ripple effect to non-button elements (buttons have it by default)
+no-ripple | Disables ripple effect on buttons
+auto-ripple | Makes all buttons inside this element automatically get ripple effects
 
 ### Customizing ripple color
 
-Use the CSS variable `--r` on your element:
+Use the CSS variable `--ripple-color` on your element:
 
 ```html
-<button style="--r: #21D4FD">Blue ripple</button>
-<a r style="--r: #B721FF" href="#">Purple ripple link</a>
+<button style="--ripple-color: #21D4FD">Blue ripple</button>
+<a ripple style="--ripple-color: #B721FF" href="#">Purple ripple link</a>
+```
+
+### Auto-applying ripples to buttons
+
+Add the `auto-ripple` attribute to a container element to automatically apply ripple effects to all buttons inside it:
+
+```html
+<div auto-ripple>
+    <button>All these buttons</button>
+    <button>Will automatically</button>
+    <button>Get ripple effects</button>
+</div>
 ```
 
 ### Using with other elements
 
-Add the `r` attribute to enable ripples on non-button elements:
+Add the `ripple` attribute to enable ripples on non-button elements:
 
 ```html
-<div r>Div with ripples</div>
-<a r href="#">Link with ripples</a>
+<div ripple>Div with ripples</div>
+<a ripple href="#">Link with ripples</a>
 ```
 
 ### Disabling ripples on buttons
 
-Add the `nr` attribute to disable ripples on buttons:
+Add the `no-ripple` attribute to disable ripples on buttons:
 
 ```html
-<button nr>No ripple button</button>
+<button no-ripple>No ripple button</button>
 ```
 
 ## Installing
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
-Você pode realizar a instalação das seguintes maneiras:
+You can install it in the following ways:
 
-1. Utilizando o npm
+1. Using npm
 
 ```
 npm install @gabrielfins/ripple-effect
 ```
 
-2. Utilizando o yarn
+2. Using yarn
 
 ```
 yarn add @gabrielfins/ripple-effect
 ```
 
-3. Baixando os arquivos
+3. Downloading the files
 
-Acesse o [site de demonstração](https://gabrielfins.github.io/ripple-effect), vá até a seção **"Adicione ao seu projeto"** e clique no botão **"Baixar"** para fazer o download apenas dos arquivos necessários. Ou baixe diretamente do repositório.
+Visit the [demo site](https://gabrielfins.github.io/ripple-effect), go to the **"Add to your project"** section and click the **"Download"** button to download just the necessary files. Or download directly from the repository.
 
-## Adicionando ao seu projeto
+## Adding to your project
 
-1. Instalando com npm ou yarn
+1. Installing with npm or yarn
 
-Após realizar a instalação, basta importar o pacote para o arquivo.
+After installation, just import the package into your file.
 
 ```js
 import "@gabrielfins/ripple-effect";
 ```
 
-2. Ao baixar os arquivos
+2. When downloading the files
 
-Por esse método, basta adicionar a tag a seguir em qualquer lugar na tag `<head>` ou `<body>` do seu documento html.
+With this method, just add the following tag anywhere in the `<head>` or `<body>` tag of your HTML document.
 
 ```html
 <script src="ripples.js"></script>
 ```
 
-Instale usando jsdelivr CDN (Install Using jsdelivr CDN):
+Install using jsdelivr CDN:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/gabrielfins/ripple-effect/dist/ripples.js"></script>
 ```
 
 ---
-#### Criado e mantido por [Gabriel Figueredo](https://github.com/gabrielfins)
+#### Created and maintained by [Gabriel Figueredo](https://github.com/gabrielfins)

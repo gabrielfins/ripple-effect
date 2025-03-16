@@ -14,12 +14,12 @@
   <title>Ripple Effect</title>
 </head>
 
-<body id="start">
+<body auto-ripple id="start" style="--ripple-color:white">
   <nav class="navbar">
-    <a r class="nav-item" href="#start"><span class="nav-icons material-icons">home</span><span class="link-text">Home</span></a>
-    <a r class="nav-item" href="#demo"><span class="nav-icons material-icons">preview</span><span class="link-text">Demo</span></a>
-    <a r class="nav-item" href="#how-to-use"><span class="nav-icons material-icons">article</span><span class="link-text">How to use</span></a>
-    <a r class="nav-item" href="#add-to-your-project"><span class="nav-icons material-icons">library_add</span><span class="link-text">Add to project</span></a>
+    <a ripple class="nav-item" href="#start"><span class="nav-icons material-icons">home</span><span class="link-text">Home</span></a>
+    <a ripple class="nav-item" href="#demo"><span class="nav-icons material-icons">preview</span><span class="link-text">Demo</span></a>
+    <a ripple class="nav-item" href="#how-to-use"><span class="nav-icons material-icons">article</span><span class="link-text">How to use</span></a>
+    <a ripple class="nav-item" href="#add-to-your-project"><span class="nav-icons material-icons">library_add</span><span class="link-text">Add to project</span></a>
   </nav>
   <main>
     <section>
@@ -55,7 +55,7 @@
     </section>
     <section id="how-to-use">
       <h2 class="secondary-title">How to use</h2>
-      <p class="primary-description">The ripple effect is automatically enabled on all button elements. For other elements, you'll need to add the r attribute. Follow the guide below to learn more.</p>
+      <p class="primary-description">The ripple effect is automatically enabled on all button elements. For other elements, you'll need to add the ripple attribute. Follow the guide below to learn more.</p>
       <table>
         <thead>
           <tr>
@@ -65,50 +65,54 @@
         </thead>
         <tbody>
           <tr>
-            <td>r</td>
+            <td>ripple</td>
             <td>Adds the ripple effect to non-button elements (buttons contains it by default)</td>
           </tr>
           <tr>
-            <td>nr</td>
+            <td>no-ripple</td>
             <td>Disables the ripple effect on buttons</td>
+          </tr>
+          <tr>
+            <td>auto-ripple</td>
+            <td>Makes all buttons inside this element automatically get ripple effects</td>
           </tr>
         </tbody>
       </table>
       <h3 class="tertiary-title">Adding ripples to non-button elements</h3>
-      <p class="primary-description">Add the r attribute to enable ripples on non-button elements:</p>
+      <p class="primary-description">Add the 'ripple' attribute to enable ripples on non-button elements:</p>
       <div class="flex-row code-row">
         <div class="code">
           <pre id="codeBlock1">
-<span class="html-char">&lt;</span><span class="html-tag">a</span> <span class="html-property">r</span> <span class="html-property">href</span><span class="html-char">="#"</span><span class="html-char">&gt;</span>Link with ripple<span class="html-char">&lt;/</span><span class="html-tag">a</span><span class="html-char">&gt;</span></pre>
-          <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock1')">
-            <span class="material-icons">content_copy</span>
+<span class="html-char">&lt;</span><span class="html-tag">a</span> <span class="html-property">ripple</span> <span class="html-property">href</span><span class="html-char">="#"</span><span class="html-char">&gt;</span>Link with ripple<span class="html-char">&lt;/</span><span class="html-tag">a</span><span class="html-char">&gt;</span></pre>
+          <button class="copy-code-button" no-ripple onclick="copyToClipboard(this, '#codeBlock1')">
+            <span class="material-icons" no-ripple>content_copy</span>
           </button>
         </div>
-        <a r href="#" class="tertiary-test-btn">Test here!</a>
+        <a ripple href="#" class="tertiary-test-btn">Test here!</a>
       </div>
       <h3 class="tertiary-title">Customizing ripple color</h3>
-      <p class="primary-description">Use the CSS variable <span class="css-selectors">--r</span> on your element to set the desired ripple color. Here's an example:</p>
+      <p class="primary-description">Use the CSS variable <span class="css-selectors">--ripple-color</span> on your element to set the desired ripple color. Here's an example:</p>
       <div class="flex-row code-row">
         <div class="code">
           <pre id="codeBlock1">
-<span class="html-char">&lt;</span><span class="html-tag">button</span> <span class="html-property">style</span><span class="html-char">="</span><span class="html-value">--r: #21D4FD</span><span class="html-char">"&gt;</span>Click me<span class="html-char">&lt;/</span><span class="html-tag">button</span><span class="html-char">&gt;</span></pre>
-          <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock1')">
+<span class="html-char">&lt;</span><span class="html-tag">button</span> <span class="html-property">style</span><span class="html-char">="</span><span class="html-value">--ripple-color: #21D4FD</span><span class="html-char">"&gt;</span>Click me<span class="html-char">&lt;/</span><span class="html-tag">button</span><span class="html-char">&gt;</span></pre>
+          <button class="copy-code-button" no-ripple onclick="copyToClipboard(this, '#codeBlock1')">
             <span class="material-icons">content_copy</span>
           </button>
         </div>
-        <button style="--r: #21D4FD" class="tertiary-test-btn">Test here!</button>
+        <button style="--ripple-color: #21D4FD" class="tertiary-test-btn">Test here!</button>
       </div>
       <h3 class="tertiary-title">Disabling ripples</h3>
-      <p class="primary-description">Add the nr attribute to disable ripples on specific elements:</p>
+      <p class="primary-description">Add the no-ripple attribute to disable ripples on specific elements:</p>
       <div class="flex-row code-row">
         <div class="code">
           <pre id="codeBlock2">
-<span class="html-char">&lt;</span><span class="html-tag">button</span> <span class="html-property">nr</span><span class="html-char">&gt;</span>No ripple effect<span class="html-char">&lt;/</span><span class="html-tag">button</span><span class="html-char">&gt;</span></pre>
-          <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock2')">
+<span class="html-char">&lt;</span><span class="html-tag">button</span> <span class="html-property">no-ripple</span><span class="html-char">&gt;</span>No ripple effect<span class="html-char">&lt;/</span><span class="html-tag">button</span><span class="html-char">&gt;</span></pre>
+          <button class="copy-code-button" no-ripple onclick="copyToClipboard(this, '#codeBlock2')">
             <span class="material-icons">content_copy</span>
           </button>
         </div>
-        <button nr class="tertiary-test-btn">Test here!</button>
+        <button no-ripple class="tertiary-test-btn">Test here!</button>
       </div>
     </section>
     <section class="secondary-section" id="add-to-your-project">
@@ -116,38 +120,38 @@
       <p>You can install with npm</p>
       <div class="secondary-code">
         <pre id="codeBlock3"><span class="package-mgr-name">npm</span> <span class="package-mgr-command">install</span> <span class="package-name">@gabrielfins/ripple-effect</span></pre>
-        <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock3')">
+        <button class="copy-code-button" no-ripple onclick="copyToClipboard(this, '#codeBlock3')">
           <span class="material-icons">content_copy</span>
         </button>
       </div>
       <p>With yarn</p>
       <div class="secondary-code">
         <pre id="codeBlock4"><span class="package-mgr-name">yarn</span> <span class="package-mgr-command">add</span> <span class="package-name">@gabrielfins/ripple-effect</span></pre>
-        <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock4')">
+        <button class="copy-code-button" no-ripple onclick="copyToClipboard(this, '#codeBlock4')">
           <span class="material-icons">content_copy</span>
         </button>
       </div>
       <p>And import in your JavaScript file:</p>
       <div class="secondary-code">
         <pre id="codeBlock5"><span class="js-code">import '</span><span class="js-import">@gabrielfins/ripple-effect</span><span class="js-code">';</span></pre>
-        <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock5')">
+        <button class="copy-code-button" no-ripple onclick="copyToClipboard(this, '#codeBlock5')">
           <span class="material-icons">content_copy</span>
         </button>
       </div>
       <p>Or you can download and add the file to your project and import with the following tag:</p>
       <div class="secondary-code">
         <pre id="codeBlock6"><span class="html-char">&lt;</span><span class="html-tag">script</span> <span class="html-property">src</span><span class="html-char">="</span><span class="html-value">ripples.js</span><span class="html-char">"&gt;&lt;/</span><span class="html-tag">script</span><span class="html-char">&gt;</span></pre>
-        <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock6')">
+        <button class="copy-code-button" no-ripple onclick="copyToClipboard(this, '#codeBlock6')">
           <span class="material-icons">content_copy</span>
         </button>
       </div>
-      <a style="--r: #B721FF" class="download-btn" href="https://github.com/gabrielfins/ripple-effect.git"><span class="material-icons">download</span>Download</a>
+      <a ripple class="download-btn" href="https://github.com/gabrielfins/ripple-effect/archive/refs/heads/master.zip"><span class="material-icons">download</span>Download</a>
     </section>
   </main>
   <footer>
     <p class="copyright">Created and maintained by <a class="copyright-link" href="https://github.com/gabrielfins"
         target="_blank" rel="noopener">Gabriel Figueredo</a></p>
   </footer>
-  <script src="./dist/ripples.js"></script>
+  <script src="../dist/ripples.js"></script>
 </body>
 </html>

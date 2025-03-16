@@ -60,16 +60,16 @@ table {
   border-collapse: collapse;
 }
 
-*[r] {
-  --r: white;
+*[ripple] {
+  --ripple-color: white;
 }
 
 .ripples-cyan {
-  --r: #21D4FD;
+  --ripple-color: #21D4FD;
 }
 
 .ripples-purple {
-  --r: #B721FF;
+  --ripple-color: #B721FF;
   opacity: .32;
 }
 

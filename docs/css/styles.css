@@ -336,16 +336,18 @@ pre {
   overflow: auto;
 }
 
+pre[class*="language-"] {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
 .css-selectors {
   color: #FFCB6B;
 }
 
-.css-symbol {
-  color: #79DDFF;
-}
-
-.css-property {
-  color: #A3CCD6;
+.css-value {
+  color: #F78C6C;
 }
 
 .css-color {
@@ -354,54 +356,6 @@ pre {
   margin-right: 3px;
   border: 1px solid #FFFFFF;
   display: inline-flex;
-}
-
-.css-color.cyan {
-  background-color: #21D4FD;
-}
-
-.css-color.purple {
-  background-color: #B721FF;
-}
-
-.css-value {
-  color: #F78C6C;
-}
-
-.package-mgr-name {
-  color: #FFCB6B;
-}
-
-.package-mgr-command {
-  color: #CCCCCC;
-}
-
-.package-name {
-  color: #C3E88D;
-}
-
-.js-code {
-  color: #89DDFF;
-}
-
-.js-import {
-  color: #C3E88D;
-}
-
-.html-char {
-  color: #89DDF1;
-}
-
-.html-tag {
-  color: #F0716D;
-}
-
-.html-property {
-  color: #C792EA;
-}
-
-.html-value {
-  color: #C3E869;
 }
 
 @keyframes animateGradient {

@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" defer></script>
   <script src="main.js" defer></script>
   <title>Ripple Effect</title>
 </head>
@@ -92,11 +95,12 @@
         exemplo abaixo.</p>
       <div class="flex-row code-row">
         <div class="code">
-          <pre id="codeBlock1">
-<span class="css-selectors">.md-ripples .ripple</span> <span class="css-symbol">{</span>
-    <span class="css-property">background-color</span><span class="css-symbol">:</span> <span class="css-color cyan"></span><span class="css-value">#21D4FD</span><span class="css-symbol">;</span>
-    <span class="css-property">opacity</span><span class="css-symbol">:</span> <span class="css-value">.32</span><span class="css-symbol">;</span>
-<span class="css-symbol">}</span></pre>
+          <pre id="codeBlock1"><code class="language-css">
+            .md-ripples .ripple {
+              background-color: #21D4FD;
+              opacity: .32;
+            }
+          </code></pre>
         <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock1')">
           <span class="material-icons">content_copy</span>
         </button>
@@ -108,11 +112,12 @@
         como no exemplo abaixo.</p>
       <div class="flex-row code-row">
         <div class="code">
-          <pre id="codeBlock2">
-<span class="css-selectors">.ripples-purple .ripple</span> <span class="css-symbol">{</span>
-    <span class="css-property">background-color</span><span class="css-symbol">:</span> <span class="css-color purple"></span><span class="css-value">#B721FF</span><span class="css-symbol">;</span>
-    <span class="css-property">opacity</span><span class="css-symbol">:</span> <span class="css-value">.32</span><span class="css-symbol">;</span>
-<span class="css-symbol">}</span></pre>
+          <pre id="codeBlock2"><code class="language-css">
+            .ripples-purple .ripple {
+              background-color: #B721FF;
+              opacity: .32;
+            }
+          </code></pre>
         <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock2')">
           <span class="material-icons">content_copy</span>
         </button>
@@ -126,28 +131,28 @@
       <h2 class="secondary-title">Adicione ao seu projeto</h2>
       <p>Você pode instalar com o npm</p>
       <div class="secondary-code">
-        <pre id="codeBlock3"><span class="package-mgr-name">npm</span> <span class="package-mgr-command">install</span> <span class="package-name">@gabrielfins/ripple-effect</span></pre>
+        <pre id="codeBlock3"><code class="language-bash">npm install @gabrielfins/ripple-effect</code></pre>
         <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock3')">
           <span class="material-icons">content_copy</span>
         </button>
       </div>
       <p>Com o yarn</p>
       <div class="secondary-code">
-        <pre id="codeBlock4"><span class="package-mgr-name">yarn</span> <span class="package-mgr-command">add</span> <span class="package-name">@gabrielfins/ripple-effect</span></pre>
+        <pre id="codeBlock4"><code class="language-bash">yarn add @gabrielfins/ripple-effect</code></pre>
         <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock4')">
           <span class="material-icons">content_copy</span>
         </button>
       </div>
       <p>E importar no seu arquivo JavaScript:</p>
       <div class="secondary-code">
-        <pre id="codeBlock5"><span class="js-code">import '</span><span class="js-import">@gabrielfins/ripple-effect</span><span class="js-code">';</span></pre>
+        <pre id="codeBlock5"><code class="language-javascript">import '@gabrielfins/ripple-effect';</code></pre>
         <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock5')">
           <span class="material-icons">content_copy</span>
         </button>
       </div>
       <p>Ou pode baixar e adicionar o arquivo ao seu projeto e importar com a seguinte tag:</p>
       <div class="secondary-code">
-        <pre id="codeBlock6"><span class="html-char">&lt;</span><span class="html-tag">script</span> <span class="html-property">src</span><span class="html-char">="</span><span class="html-value">ripples.js</span><span class="html-char">"&gt;&lt;/</span><span class="html-tag">script</span><span class="html-char">&gt;</span></pre>
+        <pre id="codeBlock6"><code class="language-markup">&lt;script src="ripples.js"&gt;&lt;/script&gt;</code></pre>
         <button class="copy-code-button" onclick="copyToClipboard(this, '#codeBlock6')">
           <span class="material-icons">content_copy</span>
         </button>

@@ -5,8 +5,13 @@
   "exports": "./dist/ripples.js",
   "main": "./dist/ripples.js",
   "types": "./ripple-effect.d.ts",
+  "files": [
+    "dist",
+    "ripple-effect.d.ts"
+  ],
   "scripts": {
     "build": "vite build",
+    "postbuild": "node scripts/sync-docs-ripples.js",
     "dev": "vite build --watch"
   },
   "repository": {

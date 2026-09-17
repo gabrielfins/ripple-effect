@@ -12,7 +12,8 @@
   "scripts": {
     "build": "vite build",
     "postbuild": "node scripts/sync-docs-ripples.js",
-    "dev": "vite build --watch"
+    "dev": "vite build --watch",
+    "docs": "vite docs --host"
   },
   "repository": {
     "type": "git",

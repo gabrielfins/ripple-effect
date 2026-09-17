@@ -41,7 +41,7 @@ if (window.Prism) {
 }
 
 function copyToClipboard(button, id) {
-  const textNode = document.querySelector(id);
+  const textNode = document.querySelector(`${id} code`);
   const iconSpan = button.querySelector('span');
 
   if (!textNode) {
@@ -52,7 +52,32 @@ function copyToClipboard(button, id) {
 
   iconSpan.innerText = 'done';
 
+  const originalTooltip = button.getAttribute('data-tooltip');
+  button.setAttribute('data-tooltip', window.getCopiedLabel ? window.getCopiedLabel() : 'Copied!');
+
   setTimeout(() => {
     iconSpan.innerText = 'content_copy';
+    button.setAttribute('data-tooltip', originalTooltip);
   }, 2000);
+}
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navbarWrapper = document.querySelector('.navbar-wrapper');
+
+function setMenuOpen(open) {
+  navbarWrapper.classList.toggle('is-open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.querySelector('.material-symbols-outlined').innerText = open ? 'close' : 'menu';
+}
+
+if (menuToggle && navbarWrapper) {
+  menuToggle.addEventListener('click', () => {
+    setMenuOpen(!navbarWrapper.classList.contains('is-open'));
+  });
+
+  navbarWrapper.addEventListener('click', (e) => {
+    if (e.target.closest('.nav-item')) {
+      setMenuOpen(false);
+    }
+  });
 }

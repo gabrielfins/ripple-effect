@@ -1,98 +1,73 @@
 # <img src="images/ripple-effect-logo.svg" alt="Ripple Effect" width="350px" />
+
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gabrielfins/ripple-effect/blob/master/LICENSE.md)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://gabrielfins.github.io/ripple-effect)
 
-### Efeito de ripples baseado no Material Design feito com **CSS, JavaScript e jQuery**
+### Ripple Effect is a lightweight JavaScript library for adding Material Design-inspired ripple effects to DOM elements
 
-Esse efeito utiliza seletores do jQuery e manipulação do DOM para obter um efeito extremamente preciso em relação ao original.
+Provides simple, customizable visual interactions, with no dependencies.
 
-## Demo
-[![forthebadge](https://forthebadge.com/images/badges/built-with-resentment.svg)](https://forthebadge.com)
+## Documentation
 
-* https://gabrielfins.github.io/ripple-effect
+- https://gabrielfins.github.io/ripple-effect
 
-## Como usar
-[![forthebadge](https://forthebadge.com/images/badges/ctrl-c-ctrl-v.svg)](https://forthebadge.com)
+## How to use
 
-Classe | Efeito
--------|-------
-md-ripples | Adiciona o efeito ao componente
-ripples-light | Muda a cor do efeito para sua versão clara
-ripples-dark (padrão) | Muda a cor do efeito para sua versão escura
+Use the classes below to apply the effect:
 
-##### Nota: as classes ripples-light e ripples-dark só funcionam em conjunto com a classe md-ripples.
+| Class         | Effect                          |
+| ------------- | -------------------------------- |
+| md-ripples    | Applies the effect to the element |
+| ripples-light | Sets the effect color to white   |
+| ripples-dark  | Sets the effect color to black   |
 
-### Mudando os padrões do efeito
+### Changing the defaults
 
-* Exemplo:
+Select the `.ripple` class inside the `.md-ripples` class. Every element with the `.md-ripples` class will follow this pattern.
 
 ```css
-.md-ripples . ripple {
-    background-color: #21D4FD;
-    opacity: .32;
+.md-ripples .ripple {
+  background-color: #a3eeff;
+  opacity: 0.32;
 }
 ```
 
-Nesse exemplo, todo elemento que tiver o efeito adicionado com `.md-ripples` terá o efeito da cor `#21D4FD`.
+### Custom classes
 
-### Criando classes personalizadas
-
-* Exemplo:
+Give your custom class a name and select the `.ripple` class inside it.
 
 ```css
 .ripples-blue .ripple {
-    background-color: #B721FF;
-    opacity: .32;
+  background-color: #e2a2ff;
+  opacity: 0.32;
 }
 ```
 
-Nesse exemplo, o elemento que tiver a classe `.ripples-blue` terá o efeito da cor `#B721FF`.
+## Download
 
-##### Nota: a opacidade padrão é .16 e sua alteração é opcional.
+Install with npm:
 
-## Instalando no seu projeto
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
-
-Você pode realizar a instalação das seguintes maneiras:
-
-1. Utilizando o npm
-
-```
+```bash
 npm install @gabrielfins/ripple-effect
 ```
 
-2. Utilizando o yarn
-
-```
-yarn add @gabrielfins/ripple-effect
-```
-
-3. Baixando os arquivos
-
-Acesse o [site de demonstração](https://gabrielfins.github.io/ripple-effect), vá até a seção **"Adicione ao seu projeto"** e clique no botão **"Baixar"** para fazer o download apenas dos arquivos necessários. Ou baixe diretamente do repositório.
-
-## Adicionando ao seu projeto
-
-1. Instalando com npm ou yarn
-
-Após realizar a instalação, basta importar o pacote para o arquivo.
+And import it in your code:
 
 ```js
-import "@gabrielfins/ripple-effect";
+import '@gabrielfins/ripple-effect';
 ```
 
-2. Ao baixar os arquivos
+### Manual download
 
-Por esse método, basta adicionar a tag a seguir em qualquer lugar na tag `<head>` ou `<body>` do seu documento html.
+1. Go to the project's [github](https://github.com/gabrielfins/ripple-effect)
+2. Download the latest release
+3. Add the `ripples.js` file from the `/dist` folder to your project
+4. Import the file in your HTML with:
 
 ```html
-<script src="ripples.js"></script>
-```
-
-Instale usando jsdelivr CDN (Install Using jsdelivr CDN):
-```html
-<script src="https://cdn.jsdelivr.net/gh/gabrielfins/ripple-effect/dist/ripples.js"></script>
+<script src="./your-path/ripples.js" defer></script>
 ```
 
 ---
-#### Criado e mantido por [Gabriel Figueredo](https://github.com/gabrielfins)
+
+#### Created and maintained by [Gabriel Figueredo](https://gabrielfins.com)

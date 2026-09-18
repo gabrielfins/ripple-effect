@@ -1,7 +1,7 @@
-import "./ripples.scss";
+import './ripples.css';
 
-document.addEventListener("pointerdown", function (e) {
-  const target = e.target.closest(".md-ripples");
+document.addEventListener('pointerdown', function (e) {
+  const target = e.target.closest('[data-ripples]');
   if (target) {
     const rect = target.getBoundingClientRect();
     const radius = findFurthestPoint(
@@ -13,8 +13,8 @@ document.addEventListener("pointerdown", function (e) {
       rect.top
     );
 
-    const circle = document.createElement("div");
-    circle.classList.add("ripple");
+    const circle = document.createElement('div');
+    circle.classList.add('ripple');
     circle.style.top = `${e.clientY - rect.top - radius}px`;
     circle.style.left = `${e.clientX - rect.left - radius}px`;
     circle.style.width = `${radius * 2}px`;
@@ -24,24 +24,24 @@ document.addEventListener("pointerdown", function (e) {
   }
 });
 
-function removeRipples(e) {
-  const ripples = document.querySelectorAll(".ripple");
+function removeRipples() {
+  const ripples = document.querySelectorAll('.ripple');
   ripples.forEach((ripple) => {
-    ripple.style.transition = "opacity 0.6s";
+    ripple.style.transition = 'opacity 0.6s';
     ripple.style.opacity = "0";
-    ripple.addEventListener("transitionend", () => {
+    ripple.addEventListener('transitionend', () => {
       ripple.remove();
     });
   });
 }
 
 [
-  "pointerup",
-  "mouseleave",
-  "dragleave",
-  "touchmove",
-  "touchend",
-  "touchcancel",
+  'pointerup',
+  'mouseleave',
+  'dragleave',
+  'touchmove',
+  'touchend',
+  'touchcancel'
 ].forEach((eventType) => {
   document.addEventListener(eventType, removeRipples);
 });

@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [master, dev]
+  pull_request:
+    branches: [master, dev]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Verify dist/ and docs/js/ripples.js are up to date with src/
+        run: |
+          if ! git diff --quiet -- dist docs/js/ripples.js; then
+            echo "::error::dist/ or docs/js/ripples.js is out of date. Run 'npm run build' and commit the result."
+            git diff -- dist docs/js/ripples.js
+            exit 1
+          fi

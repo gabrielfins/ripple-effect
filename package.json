@@ -1,7 +1,7 @@
 {
   "name": "@gabrielfins/ripple-effect",
   "version": "2.0.0",
-  "description": "Precise implementation of Material Design's ripple effect with CSS, JavaScript and jQuery",
+  "description": "Precise implementation of Material Design's ripple effect with CSS and JavaScript, no dependencies",
   "exports": "./dist/ripples.js",
   "main": "./dist/ripples.js",
   "types": "./ripple-effect.d.ts",
@@ -31,8 +31,7 @@
     "css3",
     "css",
     "js",
-    "javascript",
-    "jquery"
+    "javascript"
   ],
   "author": {
     "name": "Gabriel Figueredo",

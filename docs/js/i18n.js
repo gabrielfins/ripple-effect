@@ -1,6 +1,6 @@
 const translations = {
   pt: {
-    metaDescription: 'Página do efeito de Ripples feito com CSS, JavaScript e jQuery',
+    metaDescription: 'Página do efeito de Ripples feito com CSS e JavaScript',
     'nav.home': 'Início',
     'nav.examples': 'Exemplos',
     'nav.howToUse': 'Como usar',
@@ -43,7 +43,7 @@ const translations = {
     'langToggle.ariaLabel': 'Switch to English',
   },
   en: {
-    metaDescription: 'Material Design ripple effect page made with CSS, JavaScript and jQuery',
+    metaDescription: 'Material Design ripple effect page made with CSS and JavaScript',
     'nav.home': 'Home',
     'nav.examples': 'Examples',
     'nav.howToUse': 'How to use',

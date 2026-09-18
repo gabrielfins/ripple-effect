@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -30,7 +31,7 @@ body {
   color: var(--off-white);
 }
 
-.md-ripples .ripple {
+[data-ripples] .ripple {
   background-color: #ffffff;
 }
 
@@ -254,16 +255,34 @@ main {
   white-space: nowrap;
 }
 
+.example-button.dark {
+  border: none;
+  background-color: var(--off-white);
+  color: var(--background);
+}
+
+.example-button.opacity > .ripple {
+  opacity: 0.5;
+}
+
+.example-button.slow > .ripple {
+  animation-duration: 0.6s;
+}
+
+.example-button.fast > .ripple {
+  animation-duration: 0.1s;
+}
+
 .examples .example-button {
   flex: 1;
   min-width: 0;
 }
 
-.example-button.ripple-yellow .ripple {
+.example-button.ripple-yellow > .ripple {
   background-color: #f8c555;
 }
 
-.example-button.ripple-purple .ripple {
+.example-button.ripple-purple > .ripple {
   background-color: #cc99cd;
 }
 
@@ -300,7 +319,7 @@ ol {
   padding: 2px 6px;
   font-family: 'Consolas', monospace;
   color: #cc99cd;
-  background-color: rgb(255 255 255 / .15);
+  background-color: rgb(255 255 255 / 0.15);
   border-radius: 4px;
 }
 
@@ -329,7 +348,7 @@ ol {
   border-radius: 4px;
   background-color: #2d2d2d;
   cursor: pointer;
-  transition: background-color .1s ease-out;
+  transition: background-color 0.1s ease-out;
 }
 
 .copy-code-button:hover {
@@ -368,15 +387,15 @@ ol {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: color .1s ease-out;
+  transition: color 0.1s ease-out;
 }
 
 .github-link:hover, .github-link:focus-visible {
-  color: rgb(255 255 255 / .7);
+  color: rgb(255 255 255 / 0.7);
 }
 
 .github-link:active {
-  color: rgb(255 255 255 / .5);
+  color: rgb(255 255 255 / 0.5);
 }
 
 footer {
@@ -393,14 +412,14 @@ footer {
   font-size: 20px;
   font-weight: 700;
   text-shadow: 0 0 6px #bfcefa;
-  transition: text-shadow .1s ease-out;
+  transition: text-shadow 0.1s ease-out;
 }
 
 .copyright-link:hover {
   text-shadow: 0 0 16px #bfcefa;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 730px) {
   .navbar {
     justify-content: space-between;
   }

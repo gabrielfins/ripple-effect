@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Página do efeito de Ripples feito com CSS, JavaScript e jQuery"
+      content="Material Design ripple effect page made with CSS, JavaScript and jQuery"
     />
     <meta name="theme-color" content="#060606" />
     <link rel="stylesheet" href="./css/styles.css" type="text/css" />
@@ -42,35 +42,36 @@
     <nav class="navbar">
       <div class="navbar-wrapper">
         <div class="navbar-links">
-          <a class="md-ripples nav-item" href="#start">
+          <a class="nav-item" data-ripples href="#start">
             <span class="material-symbols-outlined">home</span>
-            <span data-i18n="nav.home">Início</span>
+            <span data-i18n="nav.home">Home</span>
           </a>
-          <a class="md-ripples nav-item" href="#examples">
+          <a class="nav-item" data-ripples href="#examples">
             <span class="material-symbols-outlined">touch_app</span>
-            <span data-i18n="nav.examples">Exemplos</span>
+            <span data-i18n="nav.examples">Examples</span>
           </a>
-          <a class="md-ripples nav-item" href="#how-to-use">
+          <a class="nav-item" data-ripples href="#how-to-use">
             <span class="material-symbols-outlined"
               >integration_instructions</span
             >
-            <span data-i18n="nav.howToUse">Como usar</span>
+            <span data-i18n="nav.howToUse">How to use</span>
           </a>
-          <a class="md-ripples nav-item" href="#download">
+          <a class="nav-item" data-ripples href="#download">
             <span class="material-symbols-outlined">download</span>
-            <span data-i18n="nav.download">Baixar</span>
+            <span data-i18n="nav.download">Download</span>
           </a>
         </div>
         <div class="navbar-links">
           <button
             type="button"
-            class="md-ripples nav-item lang-toggle"
-            aria-label="Switch to English"
+            class="nav-item lang-toggle"
+            data-ripples
+            aria-label="Mudar para português"
           >
             <span class="material-symbols-outlined">language</span>
-            <span class="lang-toggle-label">EN</span>
+            <span class="lang-toggle-label">PT</span>
           </button>
-          <a class="md-ripples nav-item" href="/v1" target="_blank">
+          <a class="nav-item" data-ripples href="/v1" target="_blank">
             <span>v1</span>
             <span class="material-symbols-outlined">arrow_outward</span>
           </a>
@@ -78,13 +79,15 @@
       </div>
       <button
         type="button"
-        class="md-ripples nav-item menu-toggle"
+        class="nav-item menu-toggle"
+        data-ripples
         aria-label="Open menu"
         aria-expanded="false"
       >
         <span class="material-symbols-outlined">menu</span>
       </button>
     </nav>
+
     <main>
       <section id="start" class="section-title">
         <h1 class="wavy-title" aria-label="Ripple Effect">
@@ -106,131 +109,190 @@
         <div class="wave" style="--i: 1"></div>
         <div class="wave" style="--i: 2"></div>
       </section>
+
       <section class="section-info">
         <p data-i18n="hero.description">
-          Ripple Effect é uma biblioteca JavaScript leve para adicionar efeitos
-          de ripple inspirados no Material Design a elementos do DOM,
-          proporcionando interações visuais simples e personalizáveis.
+          Ripple Effect is a lightweight JavaScript library for adding
+          Material Design-inspired ripple effects to DOM elements, providing
+          simple, customizable visual interactions.
         </p>
       </section>
+
       <section id="examples" class="section-info">
-        <h2 data-i18n="examples.title">Exemplos</h2>
+        <h2 data-i18n="examples.title">Examples</h2>
         <div class="examples-container">
           <div class="examples">
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
-            </button>
-          </div>
-          <div class="examples">
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
-            </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
-            </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
-            </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
           </div>
           <div class="examples">
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
-          </div>
-          <div class="examples">
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
-            </button>
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
           </div>
           <div class="examples">
-            <button class="md-ripples example-button" data-i18n="testButton">
-              Teste aqui
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
+            </button>
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
+            </button>
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
+            </button>
+          </div>
+          <div class="examples">
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
+            </button>
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
+            </button>
+          </div>
+          <div class="examples">
+            <button class="example-button" data-ripples data-i18n="testButton">
+              Try it here
             </button>
           </div>
         </div>
       </section>
+
       <section id="how-to-use" class="section-info">
-        <h2 data-i18n="howToUse.title">Como usar</h2>
+        <h2 data-i18n="howToUse.title">How to use</h2>
+
         <div class="info-content">
           <p data-i18n="howToUse.intro">
-            Use as classes abaixo para aplicar o efeito:
+            Use the attribute below to apply the effect:
           </p>
           <table class="info-table">
             <thead>
               <tr>
-                <th data-i18n="table.class">Classe</th>
-                <th data-i18n="table.effect">Efeito</th>
+                <th data-i18n="table.attribute">Attribute</th>
+                <th data-i18n="table.effect">Effect</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <code class="code-snippet"> md-ripples </code>
+                  <code class="code-snippet">data-ripples</code>
                 </td>
                 <td data-i18n="table.mdRipplesDesc">
-                  Aplica o efeito ao elemento
+                  Applies the effect to the element
                 </td>
               </tr>
               <tr>
                 <td>
-                  <code class="code-snippet">ripples-light</code>
+                  <code class="code-snippet">data-ripples="light"</code>
                 </td>
                 <td data-i18n="table.ripplesLightDesc">
-                  Define a cor do efeito para branco
+                  Sets the effect color to white (default)
                 </td>
               </tr>
               <tr>
                 <td>
-                  <code class="code-snippet">ripples-dark</code>
+                  <code class="code-snippet">data-ripples="dark"</code>
                 </td>
                 <td data-i18n="table.ripplesDarkDesc">
-                  Define a cor do efeito para preto
+                  Sets the effect color to black
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <h3 data-i18n="howToUse.changeDefaultsTitle">Mudando os padrões</h3>
+
+        <h3 data-i18n="howToUse.usageTitle">Usage</h3>
+
+        <div class="info-content">
+          <div class="code">
+            <pre id="codeBlock4"><code class="language-html" data-i18n-html="howToUse.usageExampleDefault">&lt;button data-ripples&gt;Try it here&lt;/button&gt;</code></pre>
+            <button
+              class="copy-code-button"
+              data-tooltip="Copy code"
+              data-i18n-attr="data-tooltip:copyCode.tooltip"
+              onclick="copyToClipboard(this, '#codeBlock4')"
+            >
+              <span class="material-symbols-outlined">content_copy</span>
+            </button>
+          </div>
+          <button class="example-button" data-ripples data-i18n="testButton">
+            Try it here
+          </button>
+        </div>
+
+        <div class="info-content">
+          <div class="code">
+            <pre id="codeBlock7"><code class="language-html" data-i18n-html="howToUse.usageExampleLight">&lt;button data-ripples="light"&gt;Try it here&lt;/button&gt;</code></pre>
+            <button
+              class="copy-code-button"
+              data-tooltip="Copy code"
+              data-i18n-attr="data-tooltip:copyCode.tooltip"
+              onclick="copyToClipboard(this, '#codeBlock7')"
+            >
+              <span class="material-symbols-outlined">content_copy</span>
+            </button>
+          </div>
+          <button class="example-button" data-ripples="light" data-i18n="testButton">
+            Try it here
+          </button>
+        </div>
+
+        <div class="info-content">
+          <div class="code">
+            <pre id="codeBlock8"><code class="language-html" data-i18n-html="howToUse.usageExampleDark">&lt;button data-ripples="dark"&gt;Try it here&lt;/button&gt;</code></pre>
+            <button
+              class="copy-code-button"
+              data-tooltip="Copy code"
+              data-i18n-attr="data-tooltip:copyCode.tooltip"
+              onclick="copyToClipboard(this, '#codeBlock8')"
+            >
+              <span class="material-symbols-outlined">content_copy</span>
+            </button>
+          </div>
+          <button class="example-button dark" data-ripples="dark" data-i18n="testButton">
+            Try it here
+          </button>
+        </div>
+
+        <h3 data-i18n="howToUse.changeDefaultsTitle">Changing the defaults</h3>
+
         <div class="info-content">
           <p data-i18n-html="howToUse.changeDefaultsBody">
-            Selecione a classe <code class="code-snippet">.ripple</code> dentro
-            da classe <code class="code-snippet">.md-ripples</code>. Todos os
-            elementos com a classe
-            <code class="code-snippet">.md-ripples</code> seguirão esse padrão.
+            Select the <code class="code-snippet">.ripple</code> class inside
+            an element with the
+            <code class="code-snippet">data-ripples</code> attribute. Every
+            element with that attribute will have this style.
           </p>
           <div class="code">
             <pre id="codeBlock1"><code class="language-css">
-            .md-ripples .ripple {
-              background-color: #f8c555;
-            }
-          </code></pre>
+              [data-ripples] > .ripple {
+                background-color: #f8c555;
+              }
+            </code></pre>
             <button
               class="copy-code-button"
-              data-tooltip="Copiar código"
+              data-tooltip="Copy code"
               data-i18n-attr="data-tooltip:copyCode.tooltip"
               onclick="copyToClipboard(this, '#codeBlock1')"
             >
@@ -238,52 +300,146 @@
             </button>
           </div>
           <button
-            class="example-button md-ripples ripple-yellow"
+            class="example-button ripple-yellow"
+            data-ripples
             data-i18n="testButton"
           >
-            Teste aqui!
+            Try it here
           </button>
         </div>
-        <h3 data-i18n="howToUse.customClassTitle">Classes personalizadas</h3>
+
+        <div class="info-content">
+          <p data-i18n="howToUse.opacityIntro">To make the effect stronger or weaker, change the opacity:</p>
+          <div class="code">
+            <pre id="codeBlock10"><code class="language-css">
+              [data-ripples] > .ripple {
+                opacity: 0.5;
+              }
+            </code></pre>
+            <button
+              class="copy-code-button"
+              data-tooltip="Copy code"
+              data-i18n-attr="data-tooltip:copyCode.tooltip"
+              onclick="copyToClipboard(this, '#codeBlock10')"
+            >
+              <span class="material-symbols-outlined">content_copy</span>
+            </button>
+          </div>
+          <button
+            class="example-button opacity"
+            data-ripples
+            data-i18n="testButton"
+          >
+            Try it here
+          </button>
+          <p data-i18n-html="howToUse.opacityDefault">The default opacity is <code class="code-snippet">0.16</code>.</p>
+        </div>
+
+        <div class="info-content">
+          <p data-i18n="howToUse.durationIntro">To make the effect faster or slower, change the animation duration:</p>
+          <div class="code">
+            <pre id="codeBlock11"><code class="language-css">
+              [data-ripples] > .ripple {
+                animation-duration: 0.6s;
+              }
+            </code></pre>
+            <button
+              class="copy-code-button"
+              data-tooltip="Copy code"
+              data-i18n-attr="data-tooltip:copyCode.tooltip"
+              onclick="copyToClipboard(this, '#codeBlock11')"
+            >
+              <span class="material-symbols-outlined">content_copy</span>
+            </button>
+          </div>
+          <button
+            class="example-button slow"
+            data-ripples
+            data-i18n="testButton"
+          >
+            Try it here
+          </button>
+        </div>
+
+        <div class="info-content">
+          <div class="code">
+            <pre id="codeBlock12"><code class="language-css">
+              [data-ripples] > .ripple {
+                animation-duration: 0.1s;
+              }
+            </code></pre>
+            <button
+              class="copy-code-button"
+              data-tooltip="Copy code"
+              data-i18n-attr="data-tooltip:copyCode.tooltip"
+              onclick="copyToClipboard(this, '#codeBlock12')"
+            >
+              <span class="material-symbols-outlined">content_copy</span>
+            </button>
+          </div>
+          <button
+            class="example-button fast"
+            data-ripples
+            data-i18n="testButton"
+          >
+            Try it here
+          </button>
+          <p data-i18n-html="howToUse.durationDefault">The default duration is <code class="code-snippet">0.3s</code>.</p>
+        </div>
+
+        <h3 data-i18n="howToUse.customClassTitle">Custom classes</h3>
+
         <div class="info-content">
           <p data-i18n-html="howToUse.customClassBody">
-            Dê um nome à classe personalizada e selecione a classe
-            <code class="code-snippet">.ripple</code> dentro dela.
+            Give your custom class a name and select the
+            <code class="code-snippet">.ripple</code> class inside it.
           </p>
           <div class="code">
             <pre id="codeBlock2"><code class="language-css">
-            .ripples-purple .ripple {
-              background-color: #cc99cd;
-            }
-          </code></pre>
+              [data-ripples].ripples-purple > .ripple {
+                background-color: #cc99cd;
+              }
+            </code></pre>
             <button
               class="copy-code-button"
-              data-tooltip="Copiar código"
+              data-tooltip="Copy code"
               data-i18n-attr="data-tooltip:copyCode.tooltip"
               onclick="copyToClipboard(this, '#codeBlock2')"
             >
               <span class="material-symbols-outlined">content_copy</span>
             </button>
           </div>
+          <div class="code">
+            <pre id="codeBlock9"><code class="language-html" data-i18n-html="howToUse.customClassExample">&lt;button data-ripples class="ripples-purple"&gt;Try it here&lt;/button&gt;</code></pre>
+            <button
+              class="copy-code-button"
+              data-tooltip="Copy code"
+              data-i18n-attr="data-tooltip:copyCode.tooltip"
+              onclick="copyToClipboard(this, '#codeBlock9')"
+            >
+              <span class="material-symbols-outlined">content_copy</span>
+            </button>
+          </div>
           <button
-            class="example-button md-ripples ripple-purple"
+            class="example-button ripple-purple"
+            data-ripples
             data-i18n="testButton"
           >
-            Teste aqui!
+            Try it here
           </button>
         </div>
       </section>
+
       <section id="download" class="section-info">
         <h2 data-i18n="download.title">Download</h2>
+
         <div class="info-content">
-          <p data-i18n="download.npm">Baixe com:</p>
+          <p data-i18n="download.npm">Download with:</p>
           <div class="code">
-            <pre
-              id="codeBlock3"
-            ><code class="language-bash">npm install @gabrielfins/ripple-effect</code></pre>
+            <pre id="codeBlock3"><code class="language-bash">npm install @gabrielfins/ripple-effect</code></pre>
             <button
               class="copy-code-button"
-              data-tooltip="Copiar código"
+              data-tooltip="Copy code"
               data-i18n-attr="data-tooltip:copyCode.tooltip"
               onclick="copyToClipboard(this, '#codeBlock3')"
             >
@@ -291,15 +447,14 @@
             </button>
           </div>
         </div>
+
         <div class="info-content">
-          <p data-i18n="download.importJs">Importe com:</p>
+          <p data-i18n="download.importJs">Import with:</p>
           <div class="code">
-            <pre
-              id="codeBlock5"
-            ><code class="language-javascript">import '@gabrielfins/ripple-effect';</code></pre>
+            <pre id="codeBlock5"><code class="language-javascript">import '@gabrielfins/ripple-effect';</code></pre>
             <button
               class="copy-code-button"
-              data-tooltip="Copiar código"
+              data-tooltip="Copy code"
               data-i18n-attr="data-tooltip:copyCode.tooltip"
               onclick="copyToClipboard(this, '#codeBlock5')"
             >
@@ -307,38 +462,40 @@
             </button>
           </div>
         </div>
-        <h3 data-i18n="download.manualTitle">Download manual</h3>
+
+        <h3 data-i18n="download.manualTitle">Manual download</h3>
+
         <div class="info-content">
           <ol>
             <li data-i18n-html="download.step1">
-              <span>Acesse o</span>
+              <span>Go to the project's</span>
               <a
                 class="github-link"
                 href="https://github.com/gabrielfins/ripple-effect"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>github</span>
+                <span>GitHub</span>
                 <span class="material-symbols-outlined">arrow_outward</span>
               </a>
-              <span>do projeto</span>
             </li>
-            <li data-i18n="download.step2">Baixe a release mais recente</li>
+            <li data-i18n="download.step2">Download the latest release</li>
             <li data-i18n-html="download.step3">
-              Adicione o arquivo <code class="code-snippet">ripples.js</code> da
-              pasta <code class="code-snippet">/dist</code> no seu projeto
+              Add the <code class="code-snippet">ripples.js</code> file from
+              the <code class="code-snippet">/dist</code> folder to your
+              project
             </li>
             <li data-i18n="download.step4">
-              Importe o arquivo no seu HTML com:
+              Import the file in your HTML with:
             </li>
           </ol>
           <div class="code">
-            <pre
-              id="codeBlock6"
-            ><code class="language-html">&lt;script src="./your-path/ripples.js" defer&gt;&lt;/script&gt;</code></pre>
+            <pre id="codeBlock6"><code class="language-html">
+              &lt;script src="./your-path/ripples.js" defer&gt;&lt;/script&gt;
+            </code></pre>
             <button
               class="copy-code-button"
-              data-tooltip="Copiar código"
+              data-tooltip="Copy code"
               data-i18n-attr="data-tooltip:copyCode.tooltip"
               onclick="copyToClipboard(this, '#codeBlock6')"
             >
@@ -347,10 +504,12 @@
           </div>
         </div>
       </section>
+
     </main>
+
     <footer>
       <p>
-        <span data-i18n="footer.copyright">Criado e mantido por</span>
+        <span data-i18n="footer.copyright">Created and maintained by</span>
         <a class="copyright-link" href="https://gabrielfins.com" target="_blank"
           >Gabriel Figueredo</a
         >
@@ -358,4 +517,3 @@
     </footer>
   </body>
 </html>
-

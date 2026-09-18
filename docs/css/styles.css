@@ -4,7 +4,6 @@
   --background: #060606;
   --off-white: #ededed;
   --border-color: rgb(255 255 255 / 0.3);
-  --gradient: linear-gradient(90deg, #21d4fd, #b721ff, #21d4fd, #b721ff);
 }
 
 * {
@@ -260,14 +259,12 @@ main {
   min-width: 0;
 }
 
-.example-button.ripple-cyan .ripple {
-  background-color: #a3eeff;
-  opacity: .32;
+.example-button.ripple-yellow .ripple {
+  background-color: #f8c555;
 }
 
 .example-button.ripple-purple .ripple {
-  background-color: #e2a2ff;
-  opacity: .32;
+  background-color: #cc99cd;
 }
 
 .info-content {

@@ -1,7 +1,7 @@
 import './ripples.css';
 
 document.addEventListener('pointerdown', function (e) {
-  const target = e.target.closest('.md-ripples');
+  const target = e.target.closest('[data-ripples]');
   if (target) {
     const rect = target.getBoundingClientRect();
     const radius = findFurthestPoint(
@@ -41,7 +41,7 @@ function removeRipples() {
   'dragleave',
   'touchmove',
   'touchend',
-  'touchcancel',
+  'touchcancel'
 ].forEach((eventType) => {
   document.addEventListener(eventType, removeRipples);
 });

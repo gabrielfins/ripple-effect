@@ -13,20 +13,20 @@ Provides simple, customizable visual interactions, with no dependencies.
 
 ## How to use
 
-Use the classes below to apply the effect:
+Add the `data-ripples` attribute to apply the effect:
 
-| Class         | Effect                          |
-| ------------- | -------------------------------- |
-| md-ripples    | Applies the effect to the element |
-| ripples-light | Sets the effect color to white   |
-| ripples-dark  | Sets the effect color to black   |
+| Attribute            | Effect                            |
+| --------------------- | ---------------------------------- |
+| data-ripples          | Applies the effect to the element |
+| data-ripples="light"  | Sets the effect color to white    |
+| data-ripples="dark"   | Sets the effect color to black    |
 
 ### Changing the defaults
 
-Select the `.ripple` class inside the `.md-ripples` class. Every element with the `.md-ripples` class will follow this pattern.
+Select the `.ripple` class inside an element with the `data-ripples` attribute. Every element with that attribute will follow this pattern.
 
 ```css
-.md-ripples .ripple {
+[data-ripples] .ripple {
   background-color: #a3eeff;
   opacity: 0.32;
 }

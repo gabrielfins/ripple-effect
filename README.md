@@ -1,4 +1,4 @@
-# <img src="images/ripple-effect-logo.svg" alt="Ripple Effect" width="350px" />
+# <img src="images/logo.svg" alt="Ripple Effect" width="350px" />
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gabrielfins/ripple-effect/blob/master/LICENSE.md)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://gabrielfins.github.io/ripple-effect)
@@ -16,10 +16,10 @@ Provides simple, customizable visual interactions, with no dependencies.
 Add the `data-ripples` attribute to apply the effect:
 
 | Attribute            | Effect                            |
-| --------------------- | ---------------------------------- |
-| data-ripples          | Applies the effect to the element |
-| data-ripples="light"  | Sets the effect color to white    |
-| data-ripples="dark"   | Sets the effect color to black    |
+| -------------------- | --------------------------------- |
+| data-ripples         | Applies the effect to the element |
+| data-ripples="light" | Sets the effect color to white    |
+| data-ripples="dark"  | Sets the effect color to black    |
 
 ### Changing the defaults
 

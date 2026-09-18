@@ -124,6 +124,13 @@ function applyLanguage(lang) {
     const key = el.getAttribute('data-i18n-html');
     if (dict[key] !== undefined) {
       el.innerHTML = dict[key];
+
+      if (window.Prism) {
+        const codeElements = el.matches('code[class*="language-"]')
+          ? [el]
+          : el.querySelectorAll('code[class*="language-"]');
+        codeElements.forEach((code) => Prism.highlightElement(code));
+      }
     }
   });
 

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Ripple Effect meta image</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..800&family=Outfit:wght@100..900&display=swap"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background-color: #0b0d1a;
+        color: #ededed;
+        font-family: 'Outfit', sans-serif;
+      }
+
+      /* The rings of the docs hero, caught mid-ripple. */
+      .wave {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        aspect-ratio: 1 / 1;
+        border: 48px solid rgb(255 255 255 / 0.3);
+        border-radius: 50%;
+        filter: blur(10px);
+        transform: translate(-50%, -50%);
+      }
+
+      .wave:nth-child(1) {
+        width: 430px;
+        opacity: 0.6;
+      }
+
+      .wave:nth-child(2) {
+        width: 720px;
+        opacity: 0.34;
+      }
+
+      .wave:nth-child(3) {
+        width: 1010px;
+        opacity: 0.16;
+      }
+
+      /* The content stays inside a centred safe area, for apps that crop the card. */
+      main {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 44px;
+      }
+
+      h1 {
+        margin: 0;
+        font: 600 148px/1 'EB Garamond', serif;
+        text-shadow: 0 0 26px rgb(191 206 250 / 0.55);
+      }
+
+      .badges {
+        display: flex;
+        gap: 18px;
+      }
+
+      .badge {
+        padding: 12px 32px;
+        border: 1px solid rgb(255 255 255 / 0.3);
+        border-radius: 999px;
+        font-size: 30px;
+        font-weight: 400;
+      }
+
+      .url {
+        position: fixed;
+        bottom: 36px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 24px;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The source for the Open Graph image, captured at 1200x630 into
+         docs/images/meta-image.jpg by scripts/meta-image.mjs (`npm run meta-image`).
+         Nothing links here, and it is marked noindex. -->
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+
+    <main>
+      <h1>Ripple Effect</h1>
+      <div class="badges">
+        <div class="badge">Material Design</div>
+        <div class="badge">CSS + JavaScript</div>
+        <div class="badge">No dependencies</div>
+      </div>
+    </main>
+    <p class="url">gabrielfins.github.io/ripple-effect</p>
+  </body>
+</html>

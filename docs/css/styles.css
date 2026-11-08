@@ -1,7 +1,15 @@
 :root {
+  /* The width of main, padding included, and of the navbar floating over it: the navbar overhangs
+     the content by main's 20px of padding on each side. */
   --max-width: 800px;
-  --navbar-height: 80px;
-  --background: #060606;
+  /* The space kept clear at the top for the floating navbar: 12px above it, its 66px (a 48px item, 8px of
+     padding on each side and the 1px border), and 12px below. */
+  --navbar-height: 90px;
+  /* The bluish near-black of the liquid-glass docs. */
+  --background: #0b0d1a;
+  /* Code blocks: the panel colour of the liquid-glass docs, a step lighter than the page. */
+  --code-background: #14172b;
+  --code-border: rgb(255 255 255 / 0.1);
   --off-white: #ededed;
   --border-color: rgb(255 255 255 / 0.3);
 }
@@ -62,29 +70,51 @@ button {
   color: inherit;
 }
 
+/* A pill that floats at the top, wider than the content below it by one rounded end on each side. The
+   content is --max-width minus main's 20px of padding on each side, and a rounded end is half the pill's
+   66px height (33px), so the curves sit outside the content and the straight edge starts where the
+   content does: 800 - 40 + 66 = 826px. On a screen too narrow for that it takes the width of the
+   screen less 12px on each side. Its height comes from the items inside it, so the space around them is
+   the same 8px on all four sides. */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 12px;
+  left: 50%;
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: var(--navbar-height);
-  padding: 0 20px;
-  border-bottom: 1px solid var(--border-color);
-  background-color: var(--background);
+  justify-content: space-between;
+  gap: 8px;
+  width: min(calc(var(--max-width) + 26px), calc(100% - 24px));
+  padding: 8px;
+  translate: -50% 0;
+  /* Kept so the space inside is the same as before: the visible border is drawn by ::before. */
+  border: 1px solid transparent;
+  border-radius: 999px;
+}
+
+/* The pill's background, blur and border are drawn here, not on the pill. An element with a
+   backdrop-filter hides the page from everything inside it, so the menu panel, which is inside the
+   pill, could not blur the page behind it if the pill had one. The border is drawn here too: it is
+   painted above this background, whereas the pill's own border would be painted below it. This
+   covers the pill's border area (1px on each side). */
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border: 1px solid var(--border-color);
+  border-radius: inherit;
+  background-color: color-mix(in srgb, var(--background) 70%, transparent);
   backdrop-filter: blur(16px);
 }
 
 .navbar-wrapper {
   display: flex;
+  flex: 1;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 8px;
-  width: 100%;
-  max-width: var(--max-width);
 }
 
 .navbar-links {
@@ -99,12 +129,18 @@ button {
   gap: 8px;
   height: 48px;
   padding: 0 12px;
-  border-radius: 4px;
+  border-radius: 999px;
   overflow: hidden;
   background-color: transparent;
   border: none;
   cursor: pointer;
   white-space: nowrap;
+}
+
+/* The name of the package, on the left of the pill: the title face of the page. */
+.brand {
+  padding: 0 16px;
+  font: 600 24px/1 'EB Garamond', serif;
 }
 
 .nav-item::after {
@@ -319,7 +355,7 @@ ol {
   padding: 2px 6px;
   font-family: 'Consolas', monospace;
   color: #cc99cd;
-  background-color: rgb(255 255 255 / 0.15);
+  background-color: rgb(255 255 255 / 0.07);
   border-radius: 4px;
 }
 
@@ -335,6 +371,12 @@ ol {
   padding-right: 56px !important;
 }
 
+/* More specific than the Prism theme's own rule for the grey, which is loaded after this file. */
+.code pre[class*='language-'] {
+  border: 1px solid var(--code-border);
+  background: var(--code-background);
+}
+
 .copy-code-button {
   position: absolute;
   top: 8px;
@@ -346,7 +388,7 @@ ol {
   height: 40px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  background-color: #2d2d2d;
+  background-color: var(--code-background);
   cursor: pointer;
   transition: background-color 0.1s ease-out;
 }
@@ -400,14 +442,30 @@ ol {
 
 footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   width: 100%;
-  min-height: 80px;
-  padding: 16px;
-  flex-wrap: wrap;
-  gap: 8px 24px;
+  padding: 24px 16px 32px;
   border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 20px;
+}
+
+footer .coffee-link {
+  margin-top: 8px;
 }
 
 .coffee-link {
@@ -457,22 +515,36 @@ footer {
     align-items: stretch;
     gap: 0;
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-width: none;
+    /* The pill's own border is 1px, so the panel reaches 1px past the padding box on each side,
+       and starts 1px further down to leave an 8px gap under the pill. */
+    top: calc(100% + 9px);
+    left: -1px;
+    width: calc(100% + 2px);
     height: 0;
     overflow: hidden;
-    padding: 0 20px;
-    background-color: var(--background);
-    border-bottom: 1px solid var(--border-color);
-    transition: height 0.25s ease-out;
+    padding: 0 8px;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    background-color: color-mix(in srgb, var(--background) 70%, transparent);
+    backdrop-filter: blur(16px);
+    visibility: hidden;
+    transition:
+      height 0.25s ease-out,
+      padding 0.25s ease-out,
+      border-color 0.25s ease-out,
+      visibility 0s linear 0.25s;
   }
 
   .navbar-wrapper.is-open {
     height: auto;
     height: calc-size(auto, size);
-    padding-bottom: 20px;
+    padding: 8px;
+    border-color: var(--border-color);
+    visibility: visible;
+    transition:
+      height 0.25s ease-out,
+      padding 0.25s ease-out,
+      border-color 0.25s ease-out;
   }
 
   .navbar-wrapper .navbar-links {

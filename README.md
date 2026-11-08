@@ -1,6 +1,6 @@
 # <img src="images/logo.svg" alt="Ripple Effect" width="350px" />
 
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gabrielfins/ripple-effect/blob/master/LICENSE.md)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gabrielfins/ripple-effect/blob/HEAD/LICENSE.md)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://gabrielfins.github.io/ripple-effect)
 
 ### Ripple Effect is a lightweight JavaScript library for adding Material Design-inspired ripple effects to DOM elements

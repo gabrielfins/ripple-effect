@@ -53,7 +53,7 @@ function copyToClipboard(button, id) {
   iconSpan.innerText = 'done';
 
   const originalTooltip = button.getAttribute('data-tooltip');
-  button.setAttribute('data-tooltip', window.getCopiedLabel ? window.getCopiedLabel() : 'Copied!');
+  button.setAttribute('data-tooltip', 'Copied!');
 
   setTimeout(() => {
     iconSpan.innerText = 'content_copy';
@@ -80,4 +80,7 @@ if (menuToggle && navbarWrapper) {
       setMenuOpen(false);
     }
   });
+
+  // The name is outside the menu, but going to the top closes it too.
+  document.querySelector('.navbar .brand')?.addEventListener('click', () => setMenuOpen(false));
 }

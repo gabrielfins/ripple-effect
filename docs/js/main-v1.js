@@ -11,7 +11,7 @@ function copyToClipboard(button, id) {
   iconSpan.innerText = 'done';
 
   const originalTooltip = button.getAttribute('data-tooltip');
-  button.setAttribute('data-tooltip', window.getCopiedLabel ? window.getCopiedLabel() : 'Copied!');
+  button.setAttribute('data-tooltip', 'Copied!');
 
   setTimeout(() => {
     iconSpan.innerText = 'content_copy';
